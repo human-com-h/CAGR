@@ -1,0 +1,839 @@
+{
+  "method_frozen": true,
+  "candidate_id": "fine_382",
+  "method": "CAGR v2",
+  "registered_utc": "2026-10-21T14:44:48.790853+00:00",
+  "protocol": "docs/protocol_v2_fine_gpu_v2.md",
+  "candidate_file": "configs/cagr_v2_fine_candidate.json",
+  "candidate_sha256": "11056cc0b4de28e45d9346c89a41bef430cd48c77f39dd6a9e7cec2b7a88858b",
+  "candidate_preparation_metadata_preserved": true,
+  "deployment": "full_200_development_head_only_no_OOF_on_fresh_test",
+  "deployment_head_canonical_sha256": "16605a3a0621adbfed1e6f12d5f399cfddf4c4422eb50afedc7ac1b04227b526",
+  "seed": 42,
+  "implementation": "Native State B K5 persistent state unchanged",
+  "model": {
+    "repo_id": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "handle": "qwen-lm/qwen2.5/transformers/3b-instruct/1"
+  },
+  "corpus": {
+    "documents": 483690,
+    "sha256": "751e231c0949073ce63995f1c158e89dd1351619163765f011b4d7b80718a22a"
+  },
+  "run": {
+    "kernel_id": "xju2024h/cagr-v2-fine-v2-validation",
+    "kernel_version": 1,
+    "numeric_kernel_id": 139791612,
+    "url": "https://www.kaggle.com/code/xju2024h/cagr-v2-fine-v2-validation",
+    "status": "COMPLETE",
+    "collection": "results/kaggle/online-v04/xju2024h-cagr-v2-fine-v2-validation/version-1/collection-20261021T141903671509Z",
+    "package_manifest_sha256": "7d8a2fe1a0826bfe6ac189b27116e30a873a48de8e68163c29d5a7619ffe11ba"
+  },
+  "gates": {
+    "full_components": true,
+    "independent_on_off": true,
+    "independent_is_hard_gate": true,
+    "RAG_quality": true,
+    "comparison_quality": true,
+    "latency_mean": true,
+    "exact_two_positive_three_tie_zero_harm": true,
+    "frozen_branch_distribution": true,
+    "technical_pass": true,
+    "method_frozen": true
+  },
+  "metrics": {
+    "methods": {
+      "hotpotqa": {
+        "direct": {
+          "em": 0.11,
+          "f1": 0.15863882783882782,
+          "end_to_end_ms": 209.5362066999974,
+          "retrieval_calls": 0.0,
+          "tiers": [
+            100,
+            0,
+            0
+          ]
+        },
+        "always_rag": {
+          "em": 0.18,
+          "f1": 0.2932122436950023,
+          "end_to_end_ms": 634.421464549996,
+          "retrieval_calls": 1.0,
+          "tiers": [
+            0,
+            100,
+            0
+          ]
+        },
+        "always_multihop": {
+          "em": 0.21,
+          "f1": 0.32327381907053115,
+          "end_to_end_ms": 2031.8792166099875,
+          "retrieval_calls": 2.0,
+          "tiers": [
+            0,
+            0,
+            100
+          ]
+        },
+        "matched_binary_v2": {
+          "em": 0.18,
+          "f1": 0.27377414845690706,
+          "end_to_end_ms": 591.0103526799764,
+          "retrieval_calls": 0.56,
+          "tiers": [
+            44,
+            56,
+            0
+          ]
+        },
+        "targ_style": {
+          "em": 0.18,
+          "f1": 0.2719741484569071,
+          "end_to_end_ms": 634.2876049900029,
+          "retrieval_calls": 0.66,
+          "tiers": [
+            34,
+            66,
+            0
+          ]
+        },
+        "sugar_l_style_budgeted": {
+          "em": 0.15,
+          "f1": 0.260352656115814,
+          "end_to_end_ms": 2730.7119888800084,
+          "retrieval_calls": 1.36,
+          "tiers": [
+            19,
+            26,
+            55
+          ]
+        },
+        "cagr_v1": {
+          "em": 0.18,
+          "f1": 0.2840376405203991,
+          "end_to_end_ms": 725.3305129300066,
+          "retrieval_calls": 0.64,
+          "tiers": [
+            49,
+            38,
+            13
+          ]
+        },
+        "cagr_v2": {
+          "em": 0.19,
+          "f1": 0.28488525956801813,
+          "end_to_end_ms": 642.8070729900024,
+          "retrieval_calls": 0.6,
+          "tiers": [
+            44,
+            52,
+            4
+          ]
+        },
+        "cagr_v2_full": {
+          "em": 0.19,
+          "f1": 0.2888852595680182,
+          "end_to_end_ms": 645.138614110008,
+          "retrieval_calls": 0.6,
+          "tiers": [
+            44,
+            52,
+            4
+          ]
+        },
+        "matched_binary_v2_full": {
+          "em": 0.18,
+          "f1": 0.27777414845690707,
+          "end_to_end_ms": 589.6738923299824,
+          "retrieval_calls": 0.56,
+          "tiers": [
+            44,
+            56,
+            0
+          ]
+        },
+        "targ_style_full": {
+          "em": 0.18,
+          "f1": 0.28364081512357375,
+          "end_to_end_ms": 602.9275284399853,
+          "retrieval_calls": 0.6,
+          "tiers": [
+            40,
+            60,
+            0
+          ]
+        }
+      },
+      "triviaqa": {
+        "direct": {
+          "em": 0.45,
+          "f1": 0.4816123680241327,
+          "end_to_end_ms": 184.84418909004944,
+          "retrieval_calls": 0.0,
+          "tiers": [
+            100,
+            0,
+            0
+          ]
+        },
+        "always_rag": {
+          "em": 0.41,
+          "f1": 0.4548406794976055,
+          "end_to_end_ms": 585.49300638997,
+          "retrieval_calls": 1.0,
+          "tiers": [
+            0,
+            100,
+            0
+          ]
+        },
+        "always_multihop": {
+          "em": 0.45,
+          "f1": 0.48090968219302327,
+          "end_to_end_ms": 1895.009205689962,
+          "retrieval_calls": 2.0,
+          "tiers": [
+            0,
+            0,
+            100
+          ]
+        },
+        "matched_binary_v2": {
+          "em": 0.46,
+          "f1": 0.4951288515406162,
+          "end_to_end_ms": 415.63697535002575,
+          "retrieval_calls": 0.43,
+          "tiers": [
+            57,
+            43,
+            0
+          ]
+        },
+        "targ_style": {
+          "em": 0.46,
+          "f1": 0.49577401283093875,
+          "end_to_end_ms": 474.13433053000057,
+          "retrieval_calls": 0.52,
+          "tiers": [
+            48,
+            52,
+            0
+          ]
+        },
+        "sugar_l_style_budgeted": {
+          "em": 0.45,
+          "f1": 0.4792210501221766,
+          "end_to_end_ms": 2186.907148270015,
+          "retrieval_calls": 1.04,
+          "tiers": [
+            39,
+            18,
+            43
+          ]
+        },
+        "cagr_v1": {
+          "em": 0.45,
+          "f1": 0.48179551820728295,
+          "end_to_end_ms": 453.3094972300023,
+          "retrieval_calls": 0.37,
+          "tiers": [
+            69,
+            25,
+            6
+          ]
+        },
+        "cagr_v2": {
+          "em": 0.46,
+          "f1": 0.4951288515406162,
+          "end_to_end_ms": 437.969833359939,
+          "retrieval_calls": 0.44,
+          "tiers": [
+            57,
+            42,
+            1
+          ]
+        },
+        "cagr_v2_full": {
+          "em": 0.46,
+          "f1": 0.4951288515406162,
+          "end_to_end_ms": 443.42798813998803,
+          "retrieval_calls": 0.45,
+          "tiers": [
+            56,
+            43,
+            1
+          ]
+        },
+        "matched_binary_v2_full": {
+          "em": 0.46,
+          "f1": 0.4951288515406162,
+          "end_to_end_ms": 420.7100432600055,
+          "retrieval_calls": 0.44,
+          "tiers": [
+            56,
+            44,
+            0
+          ]
+        },
+        "targ_style_full": {
+          "em": 0.46,
+          "f1": 0.49419551820728286,
+          "end_to_end_ms": 449.55170570996415,
+          "retrieval_calls": 0.46,
+          "tiers": [
+            54,
+            46,
+            0
+          ]
+        }
+      },
+      "overall": {
+        "direct": {
+          "em": 0.28,
+          "f1": 0.32012559793148027,
+          "end_to_end_ms": 197.19019789502337,
+          "retrieval_calls": 0.0,
+          "tiers": [
+            200,
+            0,
+            0
+          ]
+        },
+        "always_rag": {
+          "em": 0.295,
+          "f1": 0.3740264615963039,
+          "end_to_end_ms": 609.957235469983,
+          "retrieval_calls": 1.0,
+          "tiers": [
+            0,
+            200,
+            0
+          ]
+        },
+        "always_multihop": {
+          "em": 0.33,
+          "f1": 0.40209175063177727,
+          "end_to_end_ms": 1963.4442111499748,
+          "retrieval_calls": 2.0,
+          "tiers": [
+            0,
+            0,
+            200
+          ]
+        },
+        "matched_binary_v2": {
+          "em": 0.32,
+          "f1": 0.38445149999876166,
+          "end_to_end_ms": 503.3236640150011,
+          "retrieval_calls": 0.495,
+          "tiers": [
+            101,
+            99,
+            0
+          ]
+        },
+        "targ_style": {
+          "em": 0.32,
+          "f1": 0.3838740806439229,
+          "end_to_end_ms": 554.2109677600018,
+          "retrieval_calls": 0.59,
+          "tiers": [
+            82,
+            118,
+            0
+          ]
+        },
+        "sugar_l_style_budgeted": {
+          "em": 0.3,
+          "f1": 0.36978685311899523,
+          "end_to_end_ms": 2458.809568575012,
+          "retrieval_calls": 1.2,
+          "tiers": [
+            58,
+            44,
+            98
+          ]
+        },
+        "cagr_v1": {
+          "em": 0.315,
+          "f1": 0.382916579363841,
+          "end_to_end_ms": 589.3200050800045,
+          "retrieval_calls": 0.505,
+          "tiers": [
+            118,
+            63,
+            19
+          ]
+        },
+        "cagr_v2": {
+          "em": 0.325,
+          "f1": 0.3900070555543172,
+          "end_to_end_ms": 540.3884531749708,
+          "retrieval_calls": 0.52,
+          "tiers": [
+            101,
+            94,
+            5
+          ]
+        },
+        "cagr_v2_full": {
+          "em": 0.325,
+          "f1": 0.3920070555543172,
+          "end_to_end_ms": 544.2833011249979,
+          "retrieval_calls": 0.525,
+          "tiers": [
+            100,
+            95,
+            5
+          ]
+        },
+        "matched_binary_v2_full": {
+          "em": 0.32,
+          "f1": 0.38645149999876166,
+          "end_to_end_ms": 505.19196779499396,
+          "retrieval_calls": 0.5,
+          "tiers": [
+            100,
+            100,
+            0
+          ]
+        },
+        "targ_style_full": {
+          "em": 0.32,
+          "f1": 0.3889181666654283,
+          "end_to_end_ms": 526.2396170749747,
+          "retrieval_calls": 0.53,
+          "tiers": [
+            94,
+            106,
+            0
+          ]
+        }
+      }
+    },
+    "overhead": {
+      "hotpotqa": {
+        "cagr_v2": {
+          "full_components": {
+            "n": 100,
+            "mean": 0.0013829271355782458,
+            "ci95": [
+              0.0012616455983901736,
+              0.0015041757590172438
+            ],
+            "upper_one_sided95": 0.001485631603413791
+          },
+          "passed": true
+        },
+        "cagr_v2_full": {
+          "full_components": {
+            "n": 100,
+            "mean": 0.001379432272054109,
+            "ci95": [
+              0.0012557621345967765,
+              0.0015046737451253577
+            ],
+            "upper_one_sided95": 0.0014839273862652066
+          },
+          "passed": true
+        },
+        "independent_deployment_full": {
+          "independent_on_off": {
+            "n": 100,
+            "mean": 0.0008141607599735161,
+            "ci95": [
+              -0.0005848394938016777,
+              0.0022360977673639582
+            ],
+            "upper_one_sided95": 0.00201126228481038
+          },
+          "passed": true,
+          "hard_gate": true,
+          "question_count": 100,
+          "pairs_per_question": 12,
+          "physical_pairs": 1200
+        }
+      },
+      "triviaqa": {
+        "cagr_v2": {
+          "full_components": {
+            "n": 100,
+            "mean": 0.0015409847053821063,
+            "ci95": [
+              0.0014340389136171209,
+              0.0016461444238202996
+            ],
+            "upper_one_sided95": 0.001628788160107863
+          },
+          "passed": true
+        },
+        "cagr_v2_full": {
+          "full_components": {
+            "n": 100,
+            "mean": 0.0016332753913513866,
+            "ci95": [
+              0.0014693209201426165,
+              0.001844650580675957
+            ],
+            "upper_one_sided95": 0.0018031195384775843
+          },
+          "passed": true
+        },
+        "independent_deployment_full": {
+          "independent_on_off": {
+            "n": 100,
+            "mean": 0.00021043395810991654,
+            "ci95": [
+              -0.0012139547820045216,
+              0.0016267767220970262
+            ],
+            "upper_one_sided95": 0.0014014378349303735
+          },
+          "passed": true,
+          "hard_gate": true,
+          "question_count": 100,
+          "pairs_per_question": 12,
+          "physical_pairs": 1200
+        }
+      },
+      "overall": {
+        "cagr_v2": {
+          "full_components": {
+            "n": 200,
+            "mean": 0.001461955920480176,
+            "ci95": [
+              0.0013782869569097984,
+              0.0015427333215786738
+            ],
+            "upper_one_sided95": 0.001529123400550203
+          },
+          "passed": true
+        },
+        "cagr_v2_full": {
+          "full_components": {
+            "n": 200,
+            "mean": 0.0015063538317027475,
+            "ci95": [
+              0.0014008241883744941,
+              0.0016263665817475203
+            ],
+            "upper_one_sided95": 0.0016058119145333305
+          },
+          "passed": true
+        },
+        "independent_deployment_full": {
+          "independent_on_off": {
+            "n": 200,
+            "mean": 0.0005122973590417163,
+            "ci95": [
+              -0.0004965796258089515,
+              0.001535018670677534
+            ],
+            "upper_one_sided95": 0.0013685036117314987
+          },
+          "passed": true,
+          "hard_gate": true,
+          "question_count": 200,
+          "pairs_per_question": 12,
+          "physical_pairs": 2400
+        }
+      }
+    },
+    "quality": {
+      "hotpotqa": {
+        "cagr_v2": {
+          "em": true,
+          "f1": true
+        },
+        "cagr_v2_full": {
+          "em": true,
+          "f1": true
+        }
+      },
+      "triviaqa": {
+        "cagr_v2": {
+          "em": true,
+          "f1": true
+        },
+        "cagr_v2_full": {
+          "em": true,
+          "f1": true
+        }
+      },
+      "overall": {
+        "cagr_v2": {
+          "em": true,
+          "f1": true
+        },
+        "cagr_v2_full": {
+          "em": true,
+          "f1": true
+        }
+      }
+    },
+    "latency_anchors": {
+      "cagr_v2": {
+        "raw_mean_ms": 540.3884531749708,
+        "same_batch_RAG_mean_ms": 609.957235469983,
+        "same_batch_OOF_TARG_mean_ms": 554.2109677600018,
+        "RAG_anchor_ms": 588.64,
+        "normalized_mean_ms": 521.5025588340098,
+        "raw_below550": true,
+        "normalized_below550": true,
+        "raw_below_both_comparators": true,
+        "passed": true,
+        "same_batch_Full_TARG_difference_ms": 14.14883609999606
+      },
+      "cagr_v2_full": {
+        "raw_mean_ms": 544.2833011249979,
+        "same_batch_RAG_mean_ms": 609.957235469983,
+        "same_batch_OOF_TARG_mean_ms": 554.2109677600018,
+        "RAG_anchor_ms": 588.64,
+        "normalized_mean_ms": 525.2612867643991,
+        "raw_below550": true,
+        "normalized_below550": true,
+        "raw_below_both_comparators": true,
+        "passed": true,
+        "same_batch_Full_TARG_difference_ms": 18.043684050023217
+      }
+    },
+    "upgrade_effect": {
+      "cagr_v2": {
+        "upgrades": 5,
+        "positive": 2,
+        "tie": 3,
+        "negative": 0,
+        "net": 0.005555555555555556,
+        "nonupgrade_quality_unchanged": true
+      },
+      "cagr_v2_full": {
+        "upgrades": 5,
+        "positive": 2,
+        "tie": 3,
+        "negative": 0,
+        "net": 0.005555555555555556,
+        "nonupgrade_quality_unchanged": true
+      }
+    },
+    "gates": {
+      "full_components": true,
+      "independent_on_off": true,
+      "independent_is_hard_gate": true,
+      "RAG_quality": true,
+      "comparison_quality": true,
+      "latency_mean": true,
+      "exact_two_positive_three_tie_zero_harm": true,
+      "frozen_branch_distribution": true,
+      "technical_pass": true,
+      "method_frozen": true
+    }
+  },
+  "scientific_lock_base": "results/kaggle/online-v04/xju2024h-cagr-v2-fine-v2-validation/version-1/collection-20261021T141903671509Z/extracted",
+  "scientific_file_locks": {
+    "configs/asset_preparation_v03.json": "60ce913d7fded8adf040e809fd2b52f76f91901f9c0654ea93c3f930de42624f",
+    "configs/baselines_v04_online.json": "604fb2c067edb06f05e5e71a3575ee115a75ac6669dfc004ddc6cfbe68fecd0c",
+    "configs/cagr_v2_fine_candidate.json": "11056cc0b4de28e45d9346c89a41bef430cd48c77f39dd6a9e7cec2b7a88858b",
+    "configs/cagr_v2_route23.yaml": "43c29114d0ebd4c88bc759a04d43b2fdf34901e247db4b1f7bbd0b62871fe6ac",
+    "configs/experiment.yaml": "6429e39d0b56ef7f947f5b77badef35f1735dc47800994f8e47eb26710a32537",
+    "configs/fine_gpu_v2.yaml": "34066b172b6b7a1fb0d0502bf1c8e3089bf8fc255b2cbc873d07f8f0d57bd030",
+    "configs/measurement_design_v3_robust.json": "d81c351c1c4c6d4bb452219a927bcc7db2592ed4029a81e05e0e560969e7cf4b",
+    "configs/model_asset_lock.json": "b173dcbccf2afa288d5d399f68c009063f501d14f6a6310807f24ef8e48e174e",
+    "configs/mounts.json": "55f1231eacfccfd2e3f5bba7839b0b9838616d6291e2c100344131235e49cd04",
+    "configs/mounts_v03.json": "a3f972bad4d78f7630c9c9f023e1e92eb44a6060aa6e010e0bd00e78f7bbb43c",
+    "configs/online_v04.yaml": "f1b4653c60f5135e7ab28c2747836894aa2b7b8f266be91e13712cf443f53948",
+    "configs/online_v04_v2.yaml": "04c7983b52a1e2411b890ab5941469e9c61329dbf4ff07485f7674951852c8c4",
+    "configs/online_v04_v3.yaml": "2c0392e0d49d8ed95a57c4a73b488c83b6d123fc0d8f7c2d5c3ef6d9e065dd06",
+    "configs/online_v04_v3_argmax.yaml": "29523a6f626b7102594084c9560d2da5da722e571f6a43b1f7bff08324c3c4be",
+    "configs/online_v04_v3_clockfix.yaml": "dffdcfc76a077d97a37ee1df3d7201dd7f72af779f4035bb250b9462a00db6bd",
+    "configs/online_v04_v3_mountfix.yaml": "a47eac0f7966a2d636130e26ae2267a2aeb757f870ef2f065fbfcd9e911757e6",
+    "configs/online_v04_v3_native_state.yaml": "6bebabe25eb50540a7c7b9b47665ba68a1b85a75df576474d0ee28d71fe12df4",
+    "configs/online_v04_v3_parallel.yaml": "405445b163b5e4575b5e4a53cc7172339b719cb4238e44c0a49255d9e423b752",
+    "configs/online_v04_v3_robust.yaml": "02ad8d17b5e10b73f8d998735fef8782582fe1921a9fb5df3edcd66e98fb2ade",
+    "configs/requirements-runtime-v03.txt": "a4b298e3609244b206edaa1738f8ba888d645fba72293df9a970e90475b3f904",
+    "configs/router_v04_pareto.json": "8e5b7bb65a3f4500f7069eb141e05523847275929dce8e8f0a91fb382ec5922f",
+    "configs/source_lock.json": "bfcd3d4694e232e0b43407978fafb24e119d5c1a5c3c7b54e65dd4934a0adee0",
+    "configs/upgrade_v02.yaml": "33b529ca22d888464dbf7c07651dcabdc25cf52b0655964163a6c5f34e0e6b63",
+    "configs/wheel_manifest_lock_v03.json": "48c3d68ea0cd82e48f9bb6ef740dff713263a465883170158b6c81e3d8054441",
+    "scripts/analyze_route23_regimes.py": "35eeae3e5e9398c3931daa57103348a5951ac01a600a763f20fdfa3a3c4cacb4",
+    "scripts/execution_policy.py": "7f8d2a42bc04ed76ee361da6c71e309d633a963a04dc07a181c359f17fdca7b6",
+    "scripts/fit_route23.py": "8e983a8a72c60c46601c6900af94ee1d87e37d846a3754669342f92abbfefef3",
+    "scripts/fit_stage0.py": "ba96c868b8b29e6f3cda4501e4c30d6af74ab5c9c5ce83fe91bce08c958ef139",
+    "scripts/kv_bridge_inference.py": "264d85da7da865263ca790a62b3f13da3b60d385b97b24a7d197f4f84acf62c0",
+    "scripts/route23_budget.py": "dc1b0935c3fc4c741209417660b2b70b2022d9f598228256f1eb06d9726df977",
+    "scripts/route23_runtime.py": "73306d433e576139cff1eecafe06c48e47240c841391a949743eb127e816652f",
+    "scripts/run_baselines.py": "d5dea07d1a1a8754981e4195b6e47aa91977cb0623f7a9ae1a15ba8212584171",
+    "scripts/run_online_v04.py": "1be0a5153a5264db66993859918ab9950cc5c7b862e4ce32fe72c1dbe10bd657",
+    "scripts/run_online_v04_v2.py": "8251bb3e5ada9948a900126d8eb9bd7b0bdb530d9ee318d5e5bb646aefd98e1f",
+    "scripts/run_online_v04_v3.py": "24de7dc1cdabb405dcd949b63a9aba00b12a0fcb8d3ef7d45c197d83caa85de3",
+    "scripts/run_online_v04_v3_argmax.py": "ca19d77dec7e8a50e7a7a8daa6812faa5703a1ee6b928b0c4804fb8692b113d4",
+    "scripts/run_online_v04_v3_clockfix.py": "5a6def10e0e330cf57ee88e58e6445fc1db27755c9a67756f0c7467f5785e66d",
+    "scripts/run_online_v04_v3_mountfix.py": "c79476a7769279a5a61f0639f002a50e57a0808379634cdb8c575058d7abf655",
+    "scripts/run_online_v04_v3_native_state.py": "6712ef3a5b30ff4790eaf69a6cb84525e5fd69090fc5908cf6ce874a9afd847a",
+    "scripts/run_online_v04_v3_parallel.py": "c81d286b0ef6a834f3eeb3edfd507dae8e90ef7e24e72afcb7c7ef3dccd329f7",
+    "scripts/run_online_v04_v3_robust.py": "e221e167877605ca138162558a869b1801f7b35ce998de7d0d80e9fc3799c839",
+    "scripts/run_route23_collection.py": "02a7dc4ba87b47f06940e85c7911f72a89f06e3a1193fa8dc263911ee0b5c2a4",
+    "scripts/run_upgrade_study.py": "472db18726b6e214e4c55d659fa05dd0a708a2e3ba16682a40c268885d0c28cf",
+    "scripts/run_v2_fine_validation.py": "db516f8e6005ea263e45eb4aee50d466934e14238158edb03a188c098dad1cdf",
+    "scripts/run_v2_fine_validation_v2.py": "abd96013a591a568ad9b6a09149876c624547f745757071565743b1054911a8b",
+    "scripts/runtime_policy_session.py": "567df54676e845978ba6b19dc6591f824cfd7aaff6a96ed0239ece25271fa227",
+    "scripts/test1000_io_assets.py": "1ef60c557a6f61e5f218eee88fde8b6773d4af90a2f3bda9092c19e1bb00d18b",
+    "scripts/v03_assets.py": "d476bf77234cd197a2b99faa5d493185ec9ad1d9d32e9c757f32be1cbaf0a8c7",
+    "scripts/v03_dependencies.py": "a5a66ee002ceba26f0440b76febdc62e0a5a25f9c9e10505d02e83f51818469f",
+    "scripts/v03_inference.py": "4975ee536f1342a73d85092244e1acd01fcbd5c3640be995061e9dfff94066ef",
+    "scripts/v04_expansion.py": "25dcc88ab3b32b82c1b7d6e184e544e235956cd6dc2e587f45fbb16b50ecac2c",
+    "scripts/v04_features.py": "c0cb7d0baba25b568a2b4ecd77b9bc4b61973e7e998809bde29f72a1b8a60a9f",
+    "scripts/v04_inference.py": "c48857d9f3dd0445f6c17027c25f228ad2ae53f9b0f5b482d715f3ce2da26660",
+    "scripts/v04_runtime.py": "ef3fe1cef2b57111862581080b839b039e8ebccb867db470c01a93bca69339c4",
+    "scripts/v04_v2_inference.py": "183f43fa61ba458032ef1610437be7feda90686d8cad76d59d015fdc4f465b34",
+    "scripts/v04_v2_queries.py": "0c9a72655f31355f4ce87dee72ffa968478d9f6f231cba20e904396c44dd5cae",
+    "scripts/v04_v2_runtime.py": "c2674b3a1e214e857d4f78ce27496652b071b1f293ab323907fc1ec7085a9eaa",
+    "scripts/v04_v3_argmax_benchmark.py": "7bfeef69868bc19dac7cf0de1351990ccf544c2edcc4d2e13a5b7021b088bd2e",
+    "scripts/v04_v3_argmax_bind.cpp": "1ffa8a8bc76a1c6e5a80acbd6e67dd301fda6baf0d2d668a14c9ee0c1dbaadd2",
+    "scripts/v04_v3_argmax_checks.py": "6567c34855447b599f970e656a297f7009412a8f2a861e4881719d83532af607",
+    "scripts/v04_v3_argmax_cuda.cu": "498d0afdc35d357f1893f87b78fc24926b3e1ee8933a72191e2d7d173a45ab07",
+    "scripts/v04_v3_argmax_inference.py": "318829d5c0e0f0998e9f6bcafa7569475c3f167f8cd30c890246861791961207",
+    "scripts/v04_v3_benchmark.py": "a30a9fcf9ce95e30dbf131a4a3e6b2fb5b3b372c9d8304905fa77873cdfa1ba3",
+    "scripts/v04_v3_clockfix_inference.py": "13a977919e696ff7de0caef0d9abb789cc4cdd708025ad557abbab7be4fa6403",
+    "scripts/v04_v3_clockfix_pairs.py": "209ae59f09dbd88718ff2dd61b869630a450e2308b51af5e740e7441f1737578",
+    "scripts/v04_v3_fused_signal_bind.cpp": "a372e7e1a8aeaafa807c18edbe43d6a71f2fd80627e702bc8f68c60c1cc38630",
+    "scripts/v04_v3_fused_signal_cuda.cu": "62cf3df96c29ae90dfe7ff875866872cb3d3473d9eb27e8d1ecd66f6f48f1cf3",
+    "scripts/v04_v3_gates.py": "f9283892f8f2cc04c4d5ce812c65372dfad50e2c701fc540f5f3aeec8ff37c62",
+    "scripts/v04_v3_inference.py": "999918b7d6030556858d9ff23e6e31d07547171d89d887f7b4eec60a15ae323a",
+    "scripts/v04_v3_mounts.py": "bcf7aa56b253177d49e377f3920a3ac278a51c07cd6946c5bbc3d0e1767a8e3e",
+    "scripts/v04_v3_native_state_benchmark.py": "a09c5d0407ee881fde9de8e16a8bf65b3b60e5fd163f038d62a1f3a01ae9afe2",
+    "scripts/v04_v3_native_state_bind.cpp": "ef4ba1675963a0238733e759292dcdb3d077266d85c4e3c7eb34ae6d51e10be1",
+    "scripts/v04_v3_native_state_checks.py": "7f0ce45bc0ee29d220c18283093e9073d5cfe7c4194cb13302f3818fc2c7624e",
+    "scripts/v04_v3_native_state_cuda.cu": "05c081fc37805cb806a9fd939732c957b3c00bcedd3726b6af2d3ca8e9897e4a",
+    "scripts/v04_v3_native_state_host.h": "cf27cbce40e6c13707d5adca8126271fa4c9992c9a95b128195893f6115cb0a8",
+    "scripts/v04_v3_native_state_inference.py": "1a6ffb0f4aec400b1f5ec7e504869b124b96b03ad90c4e65a8d69b7fd08fc84f",
+    "scripts/v04_v3_parallel_checks.py": "2bc1ce1f64d72d44fada2710db8a264171f80e26a6fd14b5fec3470f19558ac2",
+    "scripts/v04_v3_parallel_inference.py": "d022a049d1936ea2bb86c00d1e19baccd8ddfc31c021c0c6f2113d39add76c38",
+    "scripts/v04_v3_parallel_signal_bind.cpp": "a372e7e1a8aeaafa807c18edbe43d6a71f2fd80627e702bc8f68c60c1cc38630",
+    "scripts/v04_v3_parallel_signal_cuda.cu": "edc7d847f4b10cda58638807988866fa7d23d1edb6fb056b3ca7008ba7aaa796",
+    "scripts/v04_v3_robust_benchmark.py": "8c9d058b30ba9024fc4e7419756e9edb00b8c0d769f8fb3c0c93e64f686ab0f4",
+    "scripts/v04_v3_robust_control.py": "6f4da77a1296cf984dfc49323460ea3f1ccdff9c6160e3246a9f0f1c51fdf88c",
+    "scripts/v04_v3_robust_inference.py": "9c75e313401bdf961d8b435b368f1ba4e9c1a501d0e8c87d85d1459b9708ab78",
+    "scripts/v04_v3_robust_pairs.py": "646317a91c446d396755113d42bc77be0728206f3d4301f8e57a760f1e283e95",
+    "scripts/v04_v3_signal_bind.cpp": "bfe035f5599da77a53c0460529bc86279cd05386011402682712cf8d1eb9a98c",
+    "scripts/v04_v3_signal_cuda.cu": "5f1d9e4d3edf7ab7bff7717b0ac97b91906b03179dd4832a0c253e8c077185eb",
+    "scripts/v2_fine_runtime.py": "1e22088868c4794e1d88a90babe83414cafb2678c4edd776d70f8cab789fd62d"
+  },
+  "identical_workspace_mirrors": {
+    "configs/asset_preparation_v03.json": "60ce913d7fded8adf040e809fd2b52f76f91901f9c0654ea93c3f930de42624f",
+    "configs/baselines_v04_online.json": "604fb2c067edb06f05e5e71a3575ee115a75ac6669dfc004ddc6cfbe68fecd0c",
+    "configs/cagr_v2_fine_candidate.json": "11056cc0b4de28e45d9346c89a41bef430cd48c77f39dd6a9e7cec2b7a88858b",
+    "configs/cagr_v2_route23.yaml": "43c29114d0ebd4c88bc759a04d43b2fdf34901e247db4b1f7bbd0b62871fe6ac",
+    "configs/experiment.yaml": "6429e39d0b56ef7f947f5b77badef35f1735dc47800994f8e47eb26710a32537",
+    "configs/fine_gpu_v2.yaml": "34066b172b6b7a1fb0d0502bf1c8e3089bf8fc255b2cbc873d07f8f0d57bd030",
+    "configs/model_asset_lock.json": "b173dcbccf2afa288d5d399f68c009063f501d14f6a6310807f24ef8e48e174e",
+    "configs/mounts_v03.json": "a3f972bad4d78f7630c9c9f023e1e92eb44a6060aa6e010e0bd00e78f7bbb43c",
+    "configs/online_v04_v2.yaml": "04c7983b52a1e2411b890ab5941469e9c61329dbf4ff07485f7674951852c8c4",
+    "configs/online_v04_v3.yaml": "2c0392e0d49d8ed95a57c4a73b488c83b6d123fc0d8f7c2d5c3ef6d9e065dd06",
+    "configs/online_v04_v3_argmax.yaml": "29523a6f626b7102594084c9560d2da5da722e571f6a43b1f7bff08324c3c4be",
+    "configs/online_v04_v3_clockfix.yaml": "dffdcfc76a077d97a37ee1df3d7201dd7f72af779f4035bb250b9462a00db6bd",
+    "configs/online_v04_v3_mountfix.yaml": "a47eac0f7966a2d636130e26ae2267a2aeb757f870ef2f065fbfcd9e911757e6",
+    "configs/online_v04_v3_native_state.yaml": "6bebabe25eb50540a7c7b9b47665ba68a1b85a75df576474d0ee28d71fe12df4",
+    "configs/online_v04_v3_parallel.yaml": "405445b163b5e4575b5e4a53cc7172339b719cb4238e44c0a49255d9e423b752",
+    "configs/online_v04_v3_robust.yaml": "02ad8d17b5e10b73f8d998735fef8782582fe1921a9fb5df3edcd66e98fb2ade",
+    "configs/requirements-runtime-v03.txt": "a4b298e3609244b206edaa1738f8ba888d645fba72293df9a970e90475b3f904",
+    "configs/router_v04_pareto.json": "8e5b7bb65a3f4500f7069eb141e05523847275929dce8e8f0a91fb382ec5922f",
+    "configs/source_lock.json": "bfcd3d4694e232e0b43407978fafb24e119d5c1a5c3c7b54e65dd4934a0adee0",
+    "configs/upgrade_v02.yaml": "33b529ca22d888464dbf7c07651dcabdc25cf52b0655964163a6c5f34e0e6b63",
+    "configs/wheel_manifest_lock_v03.json": "48c3d68ea0cd82e48f9bb6ef740dff713263a465883170158b6c81e3d8054441",
+    "scripts/analyze_route23_regimes.py": "35eeae3e5e9398c3931daa57103348a5951ac01a600a763f20fdfa3a3c4cacb4",
+    "scripts/execution_policy.py": "7f8d2a42bc04ed76ee361da6c71e309d633a963a04dc07a181c359f17fdca7b6",
+    "scripts/fit_route23.py": "8e983a8a72c60c46601c6900af94ee1d87e37d846a3754669342f92abbfefef3",
+    "scripts/fit_stage0.py": "ba96c868b8b29e6f3cda4501e4c30d6af74ab5c9c5ce83fe91bce08c958ef139",
+    "scripts/kv_bridge_inference.py": "264d85da7da865263ca790a62b3f13da3b60d385b97b24a7d197f4f84acf62c0",
+    "scripts/route23_budget.py": "dc1b0935c3fc4c741209417660b2b70b2022d9f598228256f1eb06d9726df977",
+    "scripts/route23_runtime.py": "73306d433e576139cff1eecafe06c48e47240c841391a949743eb127e816652f",
+    "scripts/run_baselines.py": "d5dea07d1a1a8754981e4195b6e47aa91977cb0623f7a9ae1a15ba8212584171",
+    "scripts/run_online_v04.py": "1be0a5153a5264db66993859918ab9950cc5c7b862e4ce32fe72c1dbe10bd657",
+    "scripts/run_online_v04_v2.py": "8251bb3e5ada9948a900126d8eb9bd7b0bdb530d9ee318d5e5bb646aefd98e1f",
+    "scripts/run_online_v04_v3.py": "24de7dc1cdabb405dcd949b63a9aba00b12a0fcb8d3ef7d45c197d83caa85de3",
+    "scripts/run_online_v04_v3_argmax.py": "ca19d77dec7e8a50e7a7a8daa6812faa5703a1ee6b928b0c4804fb8692b113d4",
+    "scripts/run_online_v04_v3_clockfix.py": "5a6def10e0e330cf57ee88e58e6445fc1db27755c9a67756f0c7467f5785e66d",
+    "scripts/run_online_v04_v3_mountfix.py": "c79476a7769279a5a61f0639f002a50e57a0808379634cdb8c575058d7abf655",
+    "scripts/run_online_v04_v3_native_state.py": "6712ef3a5b30ff4790eaf69a6cb84525e5fd69090fc5908cf6ce874a9afd847a",
+    "scripts/run_online_v04_v3_parallel.py": "c81d286b0ef6a834f3eeb3edfd507dae8e90ef7e24e72afcb7c7ef3dccd329f7",
+    "scripts/run_online_v04_v3_robust.py": "e221e167877605ca138162558a869b1801f7b35ce998de7d0d80e9fc3799c839",
+    "scripts/run_route23_collection.py": "02a7dc4ba87b47f06940e85c7911f72a89f06e3a1193fa8dc263911ee0b5c2a4",
+    "scripts/run_upgrade_study.py": "472db18726b6e214e4c55d659fa05dd0a708a2e3ba16682a40c268885d0c28cf",
+    "scripts/run_v2_fine_validation.py": "db516f8e6005ea263e45eb4aee50d466934e14238158edb03a188c098dad1cdf",
+    "scripts/run_v2_fine_validation_v2.py": "abd96013a591a568ad9b6a09149876c624547f745757071565743b1054911a8b",
+    "scripts/runtime_policy_session.py": "567df54676e845978ba6b19dc6591f824cfd7aaff6a96ed0239ece25271fa227",
+    "scripts/test1000_io_assets.py": "1ef60c557a6f61e5f218eee88fde8b6773d4af90a2f3bda9092c19e1bb00d18b",
+    "scripts/v03_assets.py": "d476bf77234cd197a2b99faa5d493185ec9ad1d9d32e9c757f32be1cbaf0a8c7",
+    "scripts/v03_dependencies.py": "a5a66ee002ceba26f0440b76febdc62e0a5a25f9c9e10505d02e83f51818469f",
+    "scripts/v03_inference.py": "4975ee536f1342a73d85092244e1acd01fcbd5c3640be995061e9dfff94066ef",
+    "scripts/v04_expansion.py": "25dcc88ab3b32b82c1b7d6e184e544e235956cd6dc2e587f45fbb16b50ecac2c",
+    "scripts/v04_features.py": "c0cb7d0baba25b568a2b4ecd77b9bc4b61973e7e998809bde29f72a1b8a60a9f",
+    "scripts/v04_inference.py": "c48857d9f3dd0445f6c17027c25f228ad2ae53f9b0f5b482d715f3ce2da26660",
+    "scripts/v04_runtime.py": "ef3fe1cef2b57111862581080b839b039e8ebccb867db470c01a93bca69339c4",
+    "scripts/v04_v2_inference.py": "183f43fa61ba458032ef1610437be7feda90686d8cad76d59d015fdc4f465b34",
+    "scripts/v04_v2_queries.py": "0c9a72655f31355f4ce87dee72ffa968478d9f6f231cba20e904396c44dd5cae",
+    "scripts/v04_v2_runtime.py": "c2674b3a1e214e857d4f78ce27496652b071b1f293ab323907fc1ec7085a9eaa",
+    "scripts/v04_v3_argmax_benchmark.py": "7bfeef69868bc19dac7cf0de1351990ccf544c2edcc4d2e13a5b7021b088bd2e",
+    "scripts/v04_v3_argmax_bind.cpp": "1ffa8a8bc76a1c6e5a80acbd6e67dd301fda6baf0d2d668a14c9ee0c1dbaadd2",
+    "scripts/v04_v3_argmax_checks.py": "6567c34855447b599f970e656a297f7009412a8f2a861e4881719d83532af607",
+    "scripts/v04_v3_argmax_cuda.cu": "498d0afdc35d357f1893f87b78fc24926b3e1ee8933a72191e2d7d173a45ab07",
+    "scripts/v04_v3_argmax_inference.py": "318829d5c0e0f0998e9f6bcafa7569475c3f167f8cd30c890246861791961207",
+    "scripts/v04_v3_benchmark.py": "a30a9fcf9ce95e30dbf131a4a3e6b2fb5b3b372c9d8304905fa77873cdfa1ba3",
+    "scripts/v04_v3_clockfix_inference.py": "13a977919e696ff7de0caef0d9abb789cc4cdd708025ad557abbab7be4fa6403",
+    "scripts/v04_v3_clockfix_pairs.py": "209ae59f09dbd88718ff2dd61b869630a450e2308b51af5e740e7441f1737578",
+    "scripts/v04_v3_fused_signal_bind.cpp": "a372e7e1a8aeaafa807c18edbe43d6a71f2fd80627e702bc8f68c60c1cc38630",
+    "scripts/v04_v3_fused_signal_cuda.cu": "62cf3df96c29ae90dfe7ff875866872cb3d3473d9eb27e8d1ecd66f6f48f1cf3",
+    "scripts/v04_v3_gates.py": "f9283892f8f2cc04c4d5ce812c65372dfad50e2c701fc540f5f3aeec8ff37c62",
+    "scripts/v04_v3_inference.py": "999918b7d6030556858d9ff23e6e31d07547171d89d887f7b4eec60a15ae323a",
+    "scripts/v04_v3_mounts.py": "bcf7aa56b253177d49e377f3920a3ac278a51c07cd6946c5bbc3d0e1767a8e3e",
+    "scripts/v04_v3_native_state_benchmark.py": "a09c5d0407ee881fde9de8e16a8bf65b3b60e5fd163f038d62a1f3a01ae9afe2",
+    "scripts/v04_v3_native_state_bind.cpp": "ef4ba1675963a0238733e759292dcdb3d077266d85c4e3c7eb34ae6d51e10be1",
+    "scripts/v04_v3_native_state_checks.py": "7f0ce45bc0ee29d220c18283093e9073d5cfe7c4194cb13302f3818fc2c7624e",
+    "scripts/v04_v3_native_state_cuda.cu": "05c081fc37805cb806a9fd939732c957b3c00bcedd3726b6af2d3ca8e9897e4a",
+    "scripts/v04_v3_native_state_host.h": "cf27cbce40e6c13707d5adca8126271fa4c9992c9a95b128195893f6115cb0a8",
+    "scripts/v04_v3_native_state_inference.py": "1a6ffb0f4aec400b1f5ec7e504869b124b96b03ad90c4e65a8d69b7fd08fc84f",
+    "scripts/v04_v3_parallel_checks.py": "2bc1ce1f64d72d44fada2710db8a264171f80e26a6fd14b5fec3470f19558ac2",
+    "scripts/v04_v3_parallel_inference.py": "d022a049d1936ea2bb86c00d1e19baccd8ddfc31c021c0c6f2113d39add76c38",
+    "scripts/v04_v3_parallel_signal_bind.cpp": "a372e7e1a8aeaafa807c18edbe43d6a71f2fd80627e702bc8f68c60c1cc38630",
+    "scripts/v04_v3_parallel_signal_cuda.cu": "edc7d847f4b10cda58638807988866fa7d23d1edb6fb056b3ca7008ba7aaa796",
+    "scripts/v04_v3_robust_benchmark.py": "8c9d058b30ba9024fc4e7419756e9edb00b8c0d769f8fb3c0c93e64f686ab0f4",
+    "scripts/v04_v3_robust_control.py": "6f4da77a1296cf984dfc49323460ea3f1ccdff9c6160e3246a9f0f1c51fdf88c",
+    "scripts/v04_v3_robust_inference.py": "9c75e313401bdf961d8b435b368f1ba4e9c1a501d0e8c87d85d1459b9708ab78",
+    "scripts/v04_v3_robust_pairs.py": "646317a91c446d396755113d42bc77be0728206f3d4301f8e57a760f1e283e95",
+    "scripts/v04_v3_signal_bind.cpp": "bfe035f5599da77a53c0460529bc86279cd05386011402682712cf8d1eb9a98c",
+    "scripts/v04_v3_signal_cuda.cu": "5f1d9e4d3edf7ab7bff7717b0ac97b91906b03179dd4832a0c253e8c077185eb",
+    "scripts/v2_fine_runtime.py": "1e22088868c4794e1d88a90babe83414cafb2678c4edd776d70f8cab789fd62d"
+  },
+  "registered_packaging_alias_or_mount_config": [
+    "configs/measurement_design_v3_robust.json",
+    "configs/mounts.json",
+    "configs/online_v04.yaml"
+  ],
+  "evidence_sha256": {
+    "results/cagr-v2-fine-v2-audit/v1-independent/audit.json": "f93c08e7899d2c1393868886f9b23be62835c6d797e0a6fa268f9937f451ab6b",
+    "results/cagr-v2-fine-v2-audit/v1-independent/summary.json": "4cd8e0b61f3541ca9998402cc6aba3798172cdc873f786312dcbc68d10633c6c",
+    "results/cagr-v2-fine-v2-audit/v1-independent/cost_ledger.json": "27896c7639fa28a82d0bfdc78bcff1cb44c96615b63d54b2418dae9c1e4bd3a2",
+    "results/cagr-v2-fine-v2-audit/v1-independent/normal_comparison.csv": "c5aebdbf1f83256dacda63acbca959609586d1cfe79c6833a42f8e1429256d86",
+    "results/cagr-v2-fine-v2-audit/v1-independent/paired_measurements.csv": "fa29cb7b679552e4e14085948afc8a6cf05ee353e962f73d72324251ef47e502",
+    "results/kaggle/online-v04/xju2024h-cagr-v2-fine-v2-validation/version-1/collection-20261021T141903671509Z/extracted/results/fine_validation/method_freeze.json": "cffa3d831b345d50d2beefb131784f2b601dc1b379d581823d22bab28a500fbd",
+    "results/kaggle/online-v04/xju2024h-cagr-v2-fine-v2-validation/version-1/collection-20261021T141903671509Z/source_binding.json": "f366ea3bf1262b9b372f80a72f9c1421edaf06fa17d77d6a39aa933a30c01840",
+    "results/kaggle/online-v04/xju2024h-cagr-v2-fine-v2-validation/version-1/collection-20261021T141903671509Z/provenance.json": "f3642b085876b610b92c18c9fe6a0cd4893ffe7cb7ee37d1b67dae1be32c201c",
+    "docs/online_analysis_v2_fine_v2.md": "a6897c6f54b2f9f470a8e1939bfe86387d8bc72be825f704077459461d4f2999",
+    "logs/cagr-v2-fine-gpu-v2/analysis-v1/tests.json": "ed0802deb752ef6326525cd12b6e9f64b08c65bb5c7824d501499d03df7e316d",
+    "logs/cagr-v2-fine-gpu-v2/analysis-v1/original_sha_verification.json": "9d23f879e23f95251924ffced15e1acf4cf7f85d59821f9210523a7b0a0f67c1"
+  },
+  "engineering_microtuning": "stopped",
+  "threshold_tuning": "forbidden",
+  "caveats": [
+    "Cal200 development acceptance is not fresh held-out generalization",
+    "Full CAGR 544.28ms is slower than Full TARG 526.24ms; preregistered speed comparator was OOF TARG",
+    "Historical candidate JSON preparation flags are preserved; current state is this manifest"
+  ],
+  "heldout_v2": {
+    "questions_answers_or_ciphertext_read_this_audit": false,
+    "run_started": false,
+    "next_step": "report_freeze_then_prepare_separately_registered_blind_test_after_user_launch_confirmation"
+  }
+}

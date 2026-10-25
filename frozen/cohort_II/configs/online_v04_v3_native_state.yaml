@@ -1,0 +1,157 @@
+protocol_version: cagr-online-v04-v3-zero-rebound
+paper_type: methodology
+seed: 42
+base_protocol: configs/experiment.yaml
+upgrade_protocol: configs/upgrade_v02.yaml
+execution_policy: configs/execution_policy.yaml
+router: configs/router_v04_pareto.json
+baselines: configs/baselines_v04_online.json
+partitions:
+- smoke
+- calibration
+smoke_questions: 20
+calibration_questions: 200
+held_out_test: forbidden
+methods:
+- direct
+- always_rag
+- always_multihop
+- binary_gate
+- targ_style
+- sugar_l_style_budgeted
+- cagr
+- cagr_in_situ
+method_order: seed42_rotating_counterbalance
+max_automatic_retries: 0
+runtime_entry_enabled: true
+submission_authority: direct_current_user_authorization_after_all_local_checks
+common_budget:
+  max_input_tokens_per_call: 4096
+  max_answer_tokens: 64
+  max_rewrite_tokens: 48
+  max_retrieval_calls: 2
+  max_total_output_tokens: 181
+  max_total_input_tokens: 16384
+  reserve_final_answer_tokens: 64
+quality_acceptance:
+  comparator: always_rag
+  metrics:
+  - em
+  - f1
+  per_dataset_mean_difference_min: -0.01
+  confidence_interval_is_noninferiority_hard_gate: false
+paired_bootstrap:
+  seed: 42
+  replicates: 20000
+  confidence: 0.95
+  quality_recovery_comparators:
+  - binary_gate
+  - targ_style
+  latency_retrieval_comparators:
+  - always_rag
+  - always_multihop
+  - sugar_l_style_budgeted
+  overhead_one_sided_upper_ratio: 0.005
+  overhead_bonferroni_hard_gate: false
+technical:
+  forced_paths_separately_labelled: true
+  paired_full_path_features_on_off: true
+  prefix_cache_token_equality: true
+  reject_multiple_prefill: true
+  strict_v1_reference_methods:
+  - cagr
+  - cagr_in_situ
+  - binary_gate
+  - targ_style
+  expected_decisions: 1058
+  strict_same_GPU_numeric_equality: true
+  synthetic_GPU_signal_gate_before_smoke: true
+runtime:
+  torch_required: 2.11.0+cu128
+  cuda_required: '12.8'
+  python_major_minor: '3.13'
+  gpu_count: 2
+  gpu_name_contains: T4
+  device: cuda:0
+  batch: 1
+  concurrency: 1
+  wall_budget_seconds: 10800
+assets:
+  runtime_downloads: false
+  copy_verified_index_to_working: true
+  new_private_asset_upload: false
+entry: scripts/run_online_v04_v3_native_state.py
+signal_implementation: v3_persistent_native_state_fused_argmax_top2_causal_records
+freeze_main_only_after_complete_GPU_criteria: true
+freeze_targets:
+  mean_latency_ms: 580
+  stretch_latency_ms: 550
+  overhead_upper_ratio: 0.005
+  quality_per_dataset_EM_F1_mean_min_vs_rag: -0.01
+  predeclared_priority:
+  - cagr
+  no_new_head_or_threshold_fitting: true
+  v2_rag_anchor_ms: 595.2593172450088
+  normalized_to_v2_mean_latency_ms: 580
+  require_measured_faster_than_same_batch_rag_for_normalized_anchor: true
+archived_development_arms:
+  doc_bridge:
+    rule_source: scripts/v04_v2_queries.py
+    learned_parameters: false
+    status: archived_v2_development_ablation
+  compact:
+    documents: 3
+    tokens_per_document: 96
+    max_output_tokens: 24
+    priority: main_cost_candidate
+    new_queries_and_answers_required: true
+    status: archived_v2_development_ablation
+unique_main_candidate: cagr
+v3_engineering:
+  production_cuda_event_records: 0
+  additional_device_synchronizations: 0
+  K: 5
+  V: 151936
+  FP16_window_bytes: 1519360
+  selection_priority:
+  - A
+  - B
+  microbenchmark_real_questions: 2
+  balanced_ABC_repetitions: 6
+  require_20_double_drop_before_200: true
+  strict_retrieval_trace_equality: true
+  offline_native_compilation_only: true
+  parallel_partitions: 8
+  FP32_partial_buffer_bytes: 320
+  native_entry_calls_per_position: 1
+  clock_accounting: per_dispatch_causal_union_upper_without_persistent_offset
+  fixed_independent_pairs_per_question: 12
+  independent_pair_balanced_orders:
+  - 6
+  - 6
+  independent_bootstrap_unit: question_mean_of_all_fixed_paired_ratios
+  exclude_observations: 0
+  optional_stopping: false
+  native_kernel_launches_per_position: 2
+  clock_scratch_bytes: 320
+  fixed_smoke_triplets_per_question: 120
+  ABC_measured_cycles: 20
+  ABC_predesignated_warmup_cycles: 1
+  trace_storage: single_authoritative_full_execution_log
+  gate_rejection_status: controlled_rejection_not_scientific_success
+  measurement_design: configs/measurement_design_v3_robust.json
+  fused_argmax_lowest_index: true
+  nonfinite_entire_vocabulary_rejected: true
+  index_buffer_bytes: 160
+  invalid_buffer_bytes: 160
+  pending_buffer_bytes: 8
+  host_record_layout: persistent_native_K5_array_stage_end_dicts
+  observed_outer_argmax_calls: 0
+  variants_definition:
+    A: fused_argmax_top2_vectorized8_aligned_or_scalar_fallback
+    B: fused_argmax_top2_scalar
+  GPU_numeric_checks: 120
+  persistent_native_state: true
+  fixed_buffer_tensor_args_per_position: 0
+  host_boundary_buffer_bytes: 40
+  native_clock: CLOCK_MONOTONIC_bracketed_against_python_perf_counter_ns

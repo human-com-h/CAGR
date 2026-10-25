@@ -1,0 +1,75 @@
+{
+  "generator": {
+    "repo_id": "Qwen/Qwen2.5-3B-Instruct",
+    "dtype": "float16",
+    "device": "cuda:0",
+    "attention_implementation": "sdpa",
+    "max_input_tokens": 4096,
+    "max_answer_tokens": 64,
+    "max_rewrite_tokens": 48,
+    "do_sample": false,
+    "pilot_k": 5
+  },
+  "answer_system": "Answer the question using the provided evidence when available. Output only the short answer, without explanation. If evidence is insufficient, use your knowledge; do not invent evidence.",
+  "rewrite": {
+    "rewrite_evidence_documents": 5,
+    "rewrite_tokens_per_document": 160,
+    "maximum_new_documents": 5,
+    "max_retrieval_calls_including_initial": 2,
+    "gap_rewrite_system": "Read the question and evidence. Identify the missing fact or entity relation needed to complete the answer. Write a short search query for that missing fact, using entity names found in the evidence. Do not merely repeat the original question or assume the preliminary answer is correct. Output only the search query."
+  },
+  "bridge": {
+    "instruction": "Missing search keywords (max 5 words):",
+    "max_new_tokens": 8,
+    "max_query_terms": 24,
+    "max_bridge_terms": 5,
+    "max_suffix_tokens": 48,
+    "retain_rag1_cache": true,
+    "append_parent_pending_token_once": true,
+    "reuse_parent_chat_template_suffix": true,
+    "extra_device_syncs": 0,
+    "CUDA_events": 0
+  },
+  "retrieval": {
+    "algorithm": "sqlite_fts5_bm25",
+    "tokenizer": "porter_unicode61_remove_diacritics_2",
+    "score_direction": "higher_is_better_negated_bm25",
+    "score_candidates": 10,
+    "context_documents_per_round": 5,
+    "max_document_tokens": 256,
+    "title_weight": 2.0,
+    "text_weight": 1.0,
+    "max_query_terms": 24,
+    "max_retrieval_calls": 2,
+    "use_reference_answers": false
+  },
+  "shared_budget": {
+    "max_input_tokens_per_call": 4096,
+    "max_answer_tokens": 64,
+    "max_rewrite_tokens": 48,
+    "max_retrieval_calls": 2,
+    "max_total_output_tokens": 181,
+    "max_total_input_tokens": 16384,
+    "reserve_final_answer_tokens": 64
+  },
+  "data_sources": [
+    {
+      "dataset": "hotpotqa",
+      "repo_id": "hotpotqa/hotpot_qa",
+      "revision": "1908d6afbbead072334abe2965f91bd2709910ab",
+      "file": "distractor/validation-00000-of-00001.parquet",
+      "sha256": "c20b638ca82b21d04fe12e14ff417ad05153d4d215a65de54497fca4e972f7c6"
+    },
+    {
+      "dataset": "triviaqa",
+      "repo_id": "mandarjoshi/trivia_qa",
+      "revision": "0f7faf33a3908546c6fd5b73a660e0f8ff173c2f",
+      "file": "unfiltered.nocontext/validation-00000-of-00001.parquet",
+      "sha256": "58925ac87e2e2031154899e9c1226f15d81e1675237da1a308e234b77b7bdcaf"
+    }
+  ],
+  "data_configurations": {
+    "HotpotQA": "distractor, validation",
+    "TriviaQA": "unfiltered.nocontext, validation"
+  }
+}

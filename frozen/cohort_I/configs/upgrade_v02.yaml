@@ -1,0 +1,26 @@
+protocol_version: cagr-upgrade-pilot-v0.2
+frozen_on: '2026-10-12'
+base_protocol: configs/experiment.yaml
+seed: 42
+bootstrap_seed: 42
+historical_base_protocol: configs/archive/experiment_v01.yaml
+source_run: xju2024h/cagr-stage0-baselines-v01/version-2
+initial_answers: reuse_frozen_direct_and_rag1_outputs
+query_modes: [titles_control, evidence_gap]
+variants:
+  titles_control: {query_mode: titles_control, stop_on_no_new_documents: false}
+  evidence_always: {query_mode: evidence_gap, stop_on_no_new_documents: false}
+  evidence_novelty_stop: {query_mode: evidence_gap, stop_on_no_new_documents: true}
+selected_for_development: evidence_novelty_stop
+rewrite_evidence_documents: 5
+rewrite_tokens_per_document: 160
+candidate_selection: first_5_as_in_v01
+maximum_new_documents: 5
+max_retrieval_calls_including_initial: 2
+additional_judge_calls: 0
+gap_rewrite_system: 'Read the question and evidence. Identify the missing fact or entity relation needed to complete the answer. Write a short search query for that missing fact, using entity names found in the evidence. Do not merely repeat the original question or assume the preliminary answer is correct. Output only the search query.'
+answer_system_override: null
+smoke_before_calibration: true
+test_execution: forbidden
+timing_scope: current_upgrade_increment_plus_reused_v01_initial_segment
+comparison_scope: same_initial_answers_and_corpus; online_total_latency_requires_later_validation

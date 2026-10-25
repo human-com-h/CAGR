@@ -1,0 +1,79 @@
+protocol: heldout-v2-fine382-full-two-shards
+execution_policy: configs/execution_policy.yaml
+seed: 42
+bootstrap_seed: 42
+bootstrap_replicates: 20000
+method_frozen: true
+method_freeze: configs/method_freeze_cagr_v2_fine.json
+method_freeze_sha256: 45ee1bfcf07d4d0d2ebbce1b37a6b89b0246c74dff9ed2d800aa3ff71cde0296
+deployment: configs/heldout_v2_deployment.json
+deployment_sha256: 439674c9d953fb9bba80108807b34623d87d86fa3cf75e8547ac5d8a88c89095
+candidate: fine_382
+head_scope: full_200_development
+OOF_forbidden: true
+native_state_variant: B
+runtime_policy_session: unchanged_fine_v2_once_parse_exact_bytes_binding
+methods:
+- direct
+- always_rag
+- always_multihop
+- matched_binary_v2
+- targ_style
+- sugar_l_style_budgeted
+- cagr_v1
+- cagr_v2
+common_budget:
+  max_input_tokens_per_call: 4096
+  max_answer_tokens: 64
+  max_rewrite_tokens: 48
+  max_retrieval_calls: 2
+  max_total_output_tokens: 181
+  max_total_input_tokens: 16384
+  reserve_final_answer_tokens: 64
+runtime:
+  torch_required: 2.11.0+cu128
+  cuda_required: '12.8'
+  python_major_minor: '3.13'
+  gpu_count: 2
+  gpu_name_contains: T4
+  device: cuda:0
+  batch: 1
+  concurrency: 1
+  wall_budget_seconds: 43200
+fresh_validation:
+  manifest: data/heldout-v2-run/manifest.json
+  original_manifest: data/heldout-v2/manifest.json
+  questions: 1000
+  per_dataset: 500
+  shards: 2
+  shard_per_dataset: 250
+  normal_records: 8000
+  technical_records: 4000
+  pair_records: 2000
+  pairs_per_question: 2
+  resampling_or_test_tuning: forbidden
+reference_access: local_only_after_full_shard_prediction_and_technical_commit
+reference_assets_in_prediction_package: false
+no_intermediate_quality_gate: true
+paired_overhead:
+  pair_ratio: (on_E2E-off_E2E)/off_E2E
+  estimator: mean_pair_ratios_per_question_then_mean_questions
+  resampling_unit: question_within_dataset_and_shard
+  target: 0.005
+  upper_one_sided_confidence: 0.95
+  delete_or_append_observations: false
+targets:
+  EM_F1_mean_difference_vs_RAG_per_dataset_min: -0.01
+  overhead_U95_strict: 0.005
+  latency_anchor_RAG_ms: 588.64
+  development_latency_reference_ms: 550
+  targets_do_not_control_test_continuation: true
+budget:
+  shard_minutes_planning:
+  - 90
+  - 110
+  remote_timeout_seconds: 43200
+  internal_wall_guard_seconds: 42000
+  subprocess_timeout_seconds: 42300
+  chat_wait_max_seconds: 300
+  max_automatic_retries: 0

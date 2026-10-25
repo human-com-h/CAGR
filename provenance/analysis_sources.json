@@ -1,0 +1,68 @@
+[
+  {
+    "path": "results/test1000-final/frozen-v1/merged_summary.json",
+    "original_sha256": "40e55cf64166bc41f91e2e8cb8bdac180736de28c584725977434ef8f3a80069",
+    "published_sha256": "f4a14522217a41205af2380d84c4bc71ef145bd6354ff0092b2060e6aa575ad5",
+    "transformation": "drop source_shards/source_roots and redact absolute Windows paths; numeric values unchanged"
+  },
+  {
+    "path": "results/heldout-v2-analysis/v1-independent/summary.json",
+    "original_sha256": "b5542734b59acd038afcde5d7cf66df749e24e7b1cf3137a31151d6de6bcedcf",
+    "published_sha256": "410fbb0e3ab11bc1edf8d993a108b502718d9876c465d24fbc36c129311f0f24",
+    "transformation": "drop source_shards/source_roots and redact absolute Windows paths; numeric values unchanged"
+  },
+  {
+    "path": "results/cagr-v3-local/feasibility-v1/calibration_report.json",
+    "original_sha256": "984812921207393c305e42a78d6f47816dab2bde6e37ebd2534ab01eb17ba2dd",
+    "published_sha256": "d2765ed46dfb13a7bc3deefe60d4007d1008dee782495f3687561a9c590aad8c",
+    "transformation": "drop source_shards/source_roots and redact absolute Windows paths; numeric values unchanged"
+  },
+  {
+    "path": "results/v2-feasibility/local-v3/feature_ablation_replay.json",
+    "original_sha256": "2a88b720c128fc0defe3f91590d328bd3a73c7801044f8c79149622372c72ecf",
+    "published_sha256": "5ec1edeec7b6eae52fa9d5c8957fb8d1b67931dc3cf46888e092255c883ce90f",
+    "transformation": "drop source_shards/source_roots and redact absolute Windows paths; numeric values unchanged"
+  },
+  {
+    "path": "results/v2-feasibility/local-v3/feature_ablation_quality.json",
+    "original_sha256": "2efc3dead769bc3bb6691630d07b0e2792167d270a35b1c96921e77b5de0e2b3",
+    "published_sha256": "17a355be008a5f928fa8ba6d72e39c5c00b9aae1615fda8e518e198562b0b2af",
+    "transformation": "drop source_shards/source_roots and redact absolute Windows paths; numeric values unchanged"
+  },
+  {
+    "path": "results/v2-feasibility/local-v3/prefix_K_sensitivity.json",
+    "original_sha256": "9157aa7c51761da69f3369d8dfb1619d316340dad8983be06c0362b02d37c814",
+    "published_sha256": "0f06a0da10836e489a561a7fe9fef4d0cfea6f0c8d968f046071be405cf4d1f0",
+    "transformation": "drop source_shards/source_roots and redact absolute Windows paths; numeric values unchanged"
+  },
+  {
+    "path": "results/v2-feasibility/local-v3/random_gate_quality_replay.json",
+    "original_sha256": "aabd288470d7d5f4aadf9911b6ed4c46186b7ff2b029798a382229cab1f3fe3e",
+    "published_sha256": "f2edf8ac4eaaf21b8c3b555d3b9a683bfe06a60dd5bbb2acf02e5c717f36bb97",
+    "transformation": "drop source_shards/source_roots and redact absolute Windows paths; numeric values unchanged"
+  },
+  {
+    "path": "results/cagr-v2-route23-audit/v1-independent/diagnostics-final/action_quality.json",
+    "original_sha256": "f85ed66a600bb894c9b3cb0d390ae55b369c45d16664df031ad2b1a1f4478f21",
+    "published_sha256": "f7e24970bcea462c4b32e4136fb670627f4d748c03ba95a8740796f0d2d0fd09",
+    "transformation": "drop source_shards/source_roots and redact absolute Windows paths; numeric values unchanged"
+  },
+  {
+    "path": "results/cagr-v2-route23-audit/v1-independent/diagnostics-final/bridge_diagnosis.json",
+    "original_sha256": "6c6f9f036a1b75b71588c1ef131ac10378408d61c9d7ca4079557a63add58151",
+    "published_sha256": "295b6bbe4bd9d8eb60671600efe2ca8440982b99e7136421f494a8ac20e9f158",
+    "transformation": "drop source_shards/source_roots and redact absolute Windows paths; numeric values unchanged"
+  },
+  {
+    "path": "results/v2-feasibility/local-v3/novelty_stop_replay.json",
+    "original_sha256": "37281a2f4782fff66f043db04f87f4deb4be2f140ca6c421c0c5ae611f8baf1f",
+    "published_sha256": "90a5588cf15619beba4f6ffd2b355b4772c460c254e1e6dde671f43961ff88bc",
+    "transformation": "drop source_shards/source_roots and redact absolute Windows paths; numeric values unchanged"
+  },
+  {
+    "path": "results/v2-feasibility/local-v3/stage0_quota_diagnostics.json",
+    "original_sha256": "ebd4f0d507e8ccc4f3f71466392397b6a71e4aec0a3d73c74a8a4db9b9adc48c",
+    "published_sha256": "a5619db80e9f775163c0029b4f405308b67caa40eff8e8ddfa524507a2edc99f",
+    "transformation": "drop source_shards/source_roots and redact absolute Windows paths; numeric values unchanged"
+  }
+]

@@ -1,0 +1,437 @@
+{
+  "1": {
+    "CAGR_fixed_head_stage0": {
+      "hotpotqa": {
+        "n": 500,
+        "first_retrievals": 418,
+        "first_retrieval_rate": 0.836,
+        "em": 0.232,
+        "f1": 0.32031337183837183,
+        "f1_minus_current_binary": 0.013857561707298547,
+        "f1_minus_rag": -0.015550238095238093,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 574.0014714339856,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 713.7232256419908,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "triviaqa": {
+        "n": 500,
+        "first_retrievals": 394,
+        "first_retrieval_rate": 0.788,
+        "em": 0.368,
+        "f1": 0.4344554722868912,
+        "f1_minus_current_binary": 0.0038643111045587836,
+        "f1_minus_rag": 0.02064623505316105,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 529.5485743920158,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 656.4404012060072,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "overall": {
+        "n": 1000,
+        "first_retrievals": 812,
+        "first_retrieval_rate": 0.812,
+        "em": 0.3,
+        "f1": 0.3773844220626315,
+        "f1_minus_current_binary": 0.008860936405928667,
+        "f1_minus_rag": 0.0025479984789614765,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 551.7750229130005,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 685.081813423999,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      }
+    },
+    "TARG_fixed_threshold": {
+      "hotpotqa": {
+        "n": 500,
+        "first_retrievals": 393,
+        "first_retrieval_rate": 0.786,
+        "em": 0.232,
+        "f1": 0.31971850004350005,
+        "f1_minus_current_binary": 0.013262689912426755,
+        "f1_minus_rag": -0.01614510989010989,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 556.2311946299811,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 687.590866211982,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "triviaqa": {
+        "n": 500,
+        "first_retrievals": 370,
+        "first_retrieval_rate": 0.74,
+        "em": 0.366,
+        "f1": 0.43017728246845366,
+        "f1_minus_current_binary": -0.0004138787138787112,
+        "f1_minus_rag": 0.016368045234723554,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 506.96340529401505,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 626.2631446960054,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "overall": {
+        "n": 1000,
+        "first_retrievals": 763,
+        "first_retrieval_rate": 0.763,
+        "em": 0.299,
+        "f1": 0.37494789125597683,
+        "f1_minus_current_binary": 0.006424405599274022,
+        "f1_minus_rag": 0.00011146767230683174,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 531.5972999619981,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 656.9270054539937,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      }
+    },
+    "CAGR_route_changes_vs_K5": 432,
+    "new_prefix_GPU_latency_ms": null,
+    "scope": "fixed K5 head input perturbation; not recalibrated K-specific method"
+  },
+  "2": {
+    "CAGR_fixed_head_stage0": {
+      "hotpotqa": {
+        "n": 500,
+        "first_retrievals": 330,
+        "first_retrieval_rate": 0.66,
+        "em": 0.222,
+        "f1": 0.3132727674427675,
+        "f1_minus_current_binary": 0.006816957311694154,
+        "f1_minus_rag": -0.02259084249084249,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 508.0851418119921,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 620.1670188140027,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "triviaqa": {
+        "n": 500,
+        "first_retrievals": 277,
+        "first_retrieval_rate": 0.554,
+        "em": 0.38,
+        "f1": 0.448247985040785,
+        "f1_minus_current_binary": 0.01765682385845261,
+        "f1_minus_rag": 0.03443874780705487,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 442.93490472001866,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 537.3160407819996,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "overall": {
+        "n": 1000,
+        "first_retrievals": 607,
+        "first_retrieval_rate": 0.607,
+        "em": 0.301,
+        "f1": 0.38076037624177617,
+        "f1_minus_current_binary": 0.01223689058507338,
+        "f1_minus_rag": 0.005923952658106192,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 475.5100232660054,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 578.7415297980011,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      }
+    },
+    "TARG_fixed_threshold": {
+      "hotpotqa": {
+        "n": 500,
+        "first_retrievals": 353,
+        "first_retrieval_rate": 0.706,
+        "em": 0.228,
+        "f1": 0.32150170517170523,
+        "f1_minus_current_binary": 0.01504589504063188,
+        "f1_minus_rag": -0.01436190476190476,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 525.4171993619816,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 644.7200800119781,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "triviaqa": {
+        "n": 500,
+        "first_retrievals": 329,
+        "first_retrieval_rate": 0.658,
+        "em": 0.382,
+        "f1": 0.44903322025047837,
+        "f1_minus_current_binary": 0.018442059068146024,
+        "f1_minus_rag": 0.03522398301674829,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 473.7099984160118,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 582.0606014199759,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "overall": {
+        "n": 1000,
+        "first_retrievals": 682,
+        "first_retrieval_rate": 0.682,
+        "em": 0.305,
+        "f1": 0.3852674627110918,
+        "f1_minus_current_binary": 0.016743977054388955,
+        "f1_minus_rag": 0.010431039127421765,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 499.5635988889967,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 613.3903407159769,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      }
+    },
+    "CAGR_route_changes_vs_K5": 227,
+    "new_prefix_GPU_latency_ms": null,
+    "scope": "fixed K5 head input perturbation; not recalibrated K-specific method"
+  },
+  "3": {
+    "CAGR_fixed_head_stage0": {
+      "hotpotqa": {
+        "n": 500,
+        "first_retrievals": 302,
+        "first_retrieval_rate": 0.604,
+        "em": 0.222,
+        "f1": 0.3154759420459421,
+        "f1_minus_current_binary": 0.009020131914868756,
+        "f1_minus_rag": -0.02038766788766789,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 492.80865831199065,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 596.1774601219977,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "triviaqa": {
+        "n": 500,
+        "first_retrievals": 198,
+        "first_retrieval_rate": 0.396,
+        "em": 0.372,
+        "f1": 0.4443198706371288,
+        "f1_minus_current_binary": 0.013728709454796413,
+        "f1_minus_rag": 0.030510633403398678,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 386.3045610320156,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 455.2300291540017,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "overall": {
+        "n": 1000,
+        "first_retrievals": 500,
+        "first_retrieval_rate": 0.5,
+        "em": 0.297,
+        "f1": 0.3798979063415354,
+        "f1_minus_current_binary": 0.011374420684832584,
+        "f1_minus_rag": 0.005061482757865394,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 439.55660967200316,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 525.7037446379996,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      }
+    },
+    "TARG_fixed_threshold": {
+      "hotpotqa": {
+        "n": 500,
+        "first_retrievals": 340,
+        "first_retrieval_rate": 0.68,
+        "em": 0.226,
+        "f1": 0.3219163571863572,
+        "f1_minus_current_binary": 0.015460547055283899,
+        "f1_minus_rag": -0.013947252747252748,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 522.8392875639788,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 638.7917562519793,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "triviaqa": {
+        "n": 500,
+        "first_retrievals": 282,
+        "first_retrieval_rate": 0.564,
+        "em": 0.384,
+        "f1": 0.4528055689967402,
+        "f1_minus_current_binary": 0.022214407814407814,
+        "f1_minus_rag": 0.038996331763010074,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 435.8431211360173,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 529.720033761985,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "overall": {
+        "n": 1000,
+        "first_retrievals": 622,
+        "first_retrieval_rate": 0.622,
+        "em": 0.305,
+        "f1": 0.38736096309154866,
+        "f1_minus_current_binary": 0.018837477434845856,
+        "f1_minus_rag": 0.012524539507878664,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 479.34120434999807,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 584.2558950069822,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      }
+    },
+    "CAGR_route_changes_vs_K5": 114,
+    "new_prefix_GPU_latency_ms": null,
+    "scope": "fixed K5 head input perturbation; not recalibrated K-specific method"
+  },
+  "4": {
+    "CAGR_fixed_head_stage0": {
+      "hotpotqa": {
+        "n": 500,
+        "first_retrievals": 279,
+        "first_retrieval_rate": 0.558,
+        "em": 0.222,
+        "f1": 0.31508914346440664,
+        "f1_minus_current_binary": 0.008633333333333333,
+        "f1_minus_rag": -0.02077446646920331,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 471.4021241779857,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 566.8325600400048,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "triviaqa": {
+        "n": 500,
+        "first_retrievals": 166,
+        "first_retrieval_rate": 0.332,
+        "em": 0.372,
+        "f1": 0.4457324469497051,
+        "f1_minus_current_binary": 0.015141285767372724,
+        "f1_minus_rag": 0.03192320971597499,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 362.69785157801107,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 420.16260232399736,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "overall": {
+        "n": 1000,
+        "first_retrievals": 445,
+        "first_retrieval_rate": 0.445,
+        "em": 0.297,
+        "f1": 0.38041079520705584,
+        "f1_minus_current_binary": 0.01188730955035303,
+        "f1_minus_rag": 0.005574371623385837,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 417.0499878779984,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 493.49758118200106,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      }
+    },
+    "TARG_fixed_threshold": {
+      "hotpotqa": {
+        "n": 500,
+        "first_retrievals": 326,
+        "first_retrieval_rate": 0.652,
+        "em": 0.226,
+        "f1": 0.32290048417048417,
+        "f1_minus_current_binary": 0.01644467403941088,
+        "f1_minus_rag": -0.012963125763125763,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 511.2367136279854,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 621.8295197379813,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "triviaqa": {
+        "n": 500,
+        "first_retrievals": 255,
+        "first_retrieval_rate": 0.51,
+        "em": 0.378,
+        "f1": 0.4474027678762921,
+        "f1_minus_current_binary": 0.016811606693959636,
+        "f1_minus_rag": 0.0335935306425619,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 420.84041861601895,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 504.7461975959813,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "overall": {
+        "n": 1000,
+        "first_retrievals": 581,
+        "first_retrieval_rate": 0.581,
+        "em": 0.302,
+        "f1": 0.38515162602338815,
+        "f1_minus_current_binary": 0.016628140366685258,
+        "f1_minus_rag": 0.01031520243971807,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 466.0385661220022,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 563.2878586669814,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      }
+    },
+    "CAGR_route_changes_vs_K5": 45,
+    "new_prefix_GPU_latency_ms": null,
+    "scope": "fixed K5 head input perturbation; not recalibrated K-specific method"
+  },
+  "5": {
+    "CAGR_fixed_head_stage0": {
+      "hotpotqa": {
+        "n": 500,
+        "first_retrievals": 265,
+        "first_retrieval_rate": 0.53,
+        "em": 0.214,
+        "f1": 0.3064558101310733,
+        "f1_minus_current_binary": 0.0,
+        "f1_minus_rag": -0.029407799802536643,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 457.41398797198883,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 547.1359505560134,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "triviaqa": {
+        "n": 500,
+        "first_retrievals": 145,
+        "first_retrieval_rate": 0.29,
+        "em": 0.356,
+        "f1": 0.43059116118233237,
+        "f1_minus_current_binary": 0.0,
+        "f1_minus_rag": 0.016781923948602263,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 350.680806616014,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 399.5504660079987,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "overall": {
+        "n": 1000,
+        "first_retrievals": 410,
+        "first_retrieval_rate": 0.41,
+        "em": 0.285,
+        "f1": 0.36852348565670284,
+        "f1_minus_current_binary": 0.0,
+        "f1_minus_rag": -0.006312937926967191,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 404.0473972940014,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 473.3432082820061,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      }
+    },
+    "TARG_fixed_threshold": {
+      "hotpotqa": {
+        "n": 500,
+        "first_retrievals": 314,
+        "first_retrieval_rate": 0.628,
+        "em": 0.224,
+        "f1": 0.320205382780646,
+        "f1_minus_current_binary": 0.013749572649572649,
+        "f1_minus_rag": -0.015658227152963996,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 504.88354878198294,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 610.6256893859832,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "triviaqa": {
+        "n": 500,
+        "first_retrievals": 241,
+        "first_retrieval_rate": 0.482,
+        "em": 0.372,
+        "f1": 0.44403768851121267,
+        "f1_minus_current_binary": 0.013446527328880272,
+        "f1_minus_rag": 0.030228451277482533,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 411.7589261180167,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 489.8961954959773,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "overall": {
+        "n": 1000,
+        "first_retrievals": 555,
+        "first_retrieval_rate": 0.555,
+        "em": 0.298,
+        "f1": 0.3821215356459293,
+        "f1_minus_current_binary": 0.01359804998922646,
+        "f1_minus_rag": 0.0072851120622592705,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 458.3212374499998,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 550.2609424409803,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      }
+    },
+    "CAGR_route_changes_vs_K5": 0,
+    "new_prefix_GPU_latency_ms": null,
+    "scope": "fixed K5 head input perturbation; not recalibrated K-specific method"
+  }
+}

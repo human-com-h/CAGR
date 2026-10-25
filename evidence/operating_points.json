@@ -1,0 +1,213 @@
+{
+  "CAGR-R": {
+    "stage0": {
+      "feature_schema": "logit_gap_mean_v1",
+      "gain": {
+        "mean": [
+          5.582228515625001,
+          0.21895415118086167,
+          15.52,
+          3.415
+        ],
+        "scale": [
+          2.7359215799516665,
+          0.171406753170686,
+          6.676046734408022,
+          2.2164780621517552
+        ],
+        "coefficients": [
+          0.053900863664823585,
+          -0.03178200335041159,
+          0.03195391681190011,
+          0.0015912097091459658,
+          0.03738284945756698
+        ],
+        "alpha": 100.0,
+        "feature_names": [
+          "mean_logit_gap",
+          "gap_uncertainty_of_mean",
+          "query_term_count",
+          "query_capitalized_count"
+        ]
+      },
+      "cost": {
+        "mean": [
+          5.582228515625001,
+          0.21895415118086167,
+          15.52,
+          3.415
+        ],
+        "scale": [
+          2.7359215799516665,
+          0.171406753170686,
+          6.676046734408022,
+          2.2164780621517552
+        ],
+        "coefficients": [
+          537.8398477249924,
+          -22.56302847598052,
+          23.088941138858882,
+          10.562244268222944,
+          -2.162900848567109
+        ],
+        "alpha": 100.0,
+        "feature_names": [
+          "mean_logit_gap",
+          "gap_uncertainty_of_mean",
+          "query_term_count",
+          "query_capitalized_count"
+        ]
+      }
+    },
+    "stage1": {
+      "feature_schema": "logit_gap_mean_v1",
+      "gain": {
+        "mean": [
+          8.910686197916668,
+          23.92826192780197,
+          5.13
+        ],
+        "scale": [
+          3.084264580595816,
+          50.494317693490544,
+          8.258516815990621
+        ],
+        "coefficients": [
+          0.02806528903547332,
+          -0.020064934179170688,
+          0.016598752632177527,
+          0.0010339539688110802
+        ],
+        "alpha": 100.0,
+        "feature_names": [
+          "mean_logit_gap",
+          "retrieval_score_variance",
+          "answer_length_tokens"
+        ]
+      },
+      "cost": {
+        "mean": [
+          8.910686197916668,
+          23.92826192780197,
+          5.13
+        ],
+        "scale": [
+          3.084264580595816,
+          50.494317693490544,
+          8.258516815990621
+        ],
+        "coefficients": [
+          1275.0931067850374,
+          -22.881271896972862,
+          -2.0181751823990113,
+          204.71842779869783
+        ],
+        "alpha": 10.0,
+        "feature_names": [
+          "mean_logit_gap",
+          "retrieval_score_variance",
+          "answer_length_tokens"
+        ]
+      }
+    },
+    "decision_parameters": {
+      "lambda0": 0.0,
+      "lambda1": 0.0002,
+      "threshold0": 0.06643697151231595,
+      "threshold1": -0.20252241348899253
+    }
+  },
+  "CAGR-F": {
+    "deployment": {
+      "threshold0": 0.3324547106961593,
+      "threshold1": 0.08009160634576197,
+      "trivia_confidence_threshold": 11.237109375,
+      "action_heads": {
+        "answer_expansion": {
+          "mean": [
+            8.910686197916668,
+            23.92826192780197,
+            5.13
+          ],
+          "scale": [
+            3.084264580595816,
+            50.494317693490544,
+            8.258516815990621
+          ],
+          "coefficients": [
+            -0.01565693383221407,
+            0.008456590671865398,
+            -0.0048145995020760215,
+            -0.0036819898136269194
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "retrieval_score_variance",
+            "answer_length_tokens"
+          ]
+        },
+        "KV-Bridge": {
+          "mean": [
+            8.910686197916668,
+            23.92826192780197,
+            5.13
+          ],
+          "scale": [
+            3.084264580595816,
+            50.494317693490544,
+            8.258516815990621
+          ],
+          "coefficients": [
+            0.004300902081262608,
+            -0.006464509626305646,
+            -0.005755421874616813,
+            -0.0047347422879039334
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "retrieval_score_variance",
+            "answer_length_tokens"
+          ]
+        },
+        "query_rewriting": {
+          "mean": [
+            8.910686197916668,
+            23.92826192780197,
+            5.13
+          ],
+          "scale": [
+            3.084264580595816,
+            50.494317693490544,
+            8.258516815990621
+          ],
+          "coefficients": [
+            0.02806528903547332,
+            -0.020064934179170688,
+            0.016598752632177527,
+            0.0010339539688110802
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "retrieval_score_variance",
+            "answer_length_tokens"
+          ]
+        }
+      }
+    },
+    "suppress_high_confidence_trivia": true
+  },
+  "feature_transforms": {
+    "mean_logit_gap": "mean of top-two raw-logit differences over at most five actual generated positions",
+    "gap_uncertainty_of_mean": "exp(-mean_logit_gap/3)",
+    "targ_mean_exp_gap": "mean(exp(-gap_t/3))",
+    "query_term_count": "up to 64 alphanumeric terms from the first 1024 question characters",
+    "query_capitalized_count": "capitalized non-stopword question terms within the same bound",
+    "retrieval_score_variance": "population variance of at most ten signed BM25 scores",
+    "answer_length_tokens": "generated token count, including generated termination token"
+  },
+  "coefficient_order": "intercept, then standardized feature weights",
+  "seed": 42
+}

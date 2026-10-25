@@ -1,0 +1,19 @@
+{
+  "common": {
+    "direct": "Direct",
+    "always_rag": "Always-RAG",
+    "always_multihop": "Always-Multihop",
+    "targ_style": "TARG-style",
+    "sugar_l_style_budgeted": "SUGAR-L-style"
+  },
+  "I": {
+    "binary_gate": "Matched Binary",
+    "cagr": "CAGR-R",
+    "cagr_in_situ": "CAGR-R (answer expansion)"
+  },
+  "II": {
+    "matched_binary_v2": "Matched Binary",
+    "cagr_v1": "CAGR-R",
+    "cagr_v2": "CAGR-F"
+  }
+}

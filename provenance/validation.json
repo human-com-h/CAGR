@@ -1,0 +1,49 @@
+{
+  "status": "passed_with_explicit_gpu_limit",
+  "cpu_unittest": {
+    "passed": 14,
+    "failed": 0
+  },
+  "main_scalar_checks": 128,
+  "statistics_compared": 2362,
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed": 42,
+  "table_csvs_reconstructed_and_compared": 15,
+  "frozen_source_files": 153,
+  "historical_sha_files_unchanged": 863,
+  "selected_ridge_heads_rebuilt": 22,
+  "fine_threshold_sets_rebuilt": 6,
+  "development_decisions_replayed": 400,
+  "calibration_and_test_isolated": true,
+  "fixed_questions_restored": 2220,
+  "corpus": {
+    "documents": 483690,
+    "ordered_document_ids_sha256": "859b543f5d9ef4c9dd14bc422d43aa26ed14317be1359147fe92ac6bcc47a957",
+    "sqlite_sha256": "751e231c0949073ce63995f1c158e89dd1351619163765f011b4d7b80718a22a",
+    "sqlite_version": "3.45.3",
+    "original_sqlite_byte_match": true,
+    "train_context_only": true
+  },
+  "new_model_calls": 0,
+  "new_gpu_jobs": 0,
+  "public_gpu_adapter": "not_executed",
+  "new_full_gpu_reproduction": "not_verified",
+  "code_license": "MIT",
+  "author_license_confirmation": "2026-10-24 human confirmation in current conversation",
+  "secrets_scan": "passed",
+  "publication_excludes": [
+    "credentials",
+    "private assets",
+    "source benchmark text",
+    "model weights",
+    "generated resources",
+    "exploratory history"
+  ],
+  "clean_git_checkout_tests_passed": 10,
+  "clean_git_checkout_statistics_passed": 2362,
+  "pinned_provider_metadata_links_passed": 3,
+  "private_project_guard_adapter_cpu_test": "passed",
+  "private_repository_review": true,
+  "fresh_git_root": true,
+  "previous_platform_runs_imported": false
+}

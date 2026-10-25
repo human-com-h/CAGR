@@ -1,0 +1,105 @@
+protocol_version: cagr-upgrade-pilot-v0.2
+frozen_on: '2026-10-12'
+paper_type: methodology
+framework: CAGR
+seed: 42
+execution_policy: configs/execution_policy.yaml
+model:
+  repo_id: Qwen/Qwen2.5-3B-Instruct
+  revision_from: configs/source_lock.json
+  dtype: float16
+  device: cuda:0
+  attention_implementation: sdpa
+  max_input_tokens: 4096
+  max_answer_tokens: 64
+  max_rewrite_tokens: 48
+  do_sample: false
+  pilot_k: 5
+samples:
+  hotpotqa:
+    config: distractor
+    source_split: validation
+    smoke: 10
+    calibration: 100
+    test: 500
+  triviaqa:
+    config: unfiltered.nocontext
+    source_split: validation
+    smoke: 10
+    calibration: 100
+    test: 500
+  selection: Reuse frozen IDs from data/splits/manifest.json; no resampling
+  folds: 5
+  test_execution: disabled_until_router_freeze
+  source_protocol: cagr-pilot-v0.1
+retrieval:
+  pilot_corpus: hotpotqa_distractor_train_context_only
+  corpus_scope: pilot_only_not_fullwiki
+  algorithm: sqlite_fts5_bm25
+  tokenizer: porter_unicode61_remove_diacritics_2
+  score_direction: higher_is_better_negated_bm25
+  score_candidates: 10
+  context_documents_per_round: 5
+  max_document_tokens: 256
+  title_weight: 2.0
+  text_weight: 1.0
+  max_query_terms: 24
+  max_retrieval_calls: 2
+  use_reference_answers: false
+generation:
+  answer_system: Answer the question using the provided evidence when available. Output
+    only the short answer, without explanation. If evidence is insufficient, use your
+    knowledge; do not invent evidence.
+  rewrite_system: Write one short search query to find missing evidence needed to
+    answer the question. Use the preliminary answer and evidence titles as clues,
+    but do not assume the preliminary answer is correct. Output only the search query.
+routing:
+  structure: retrieve_then_conditional_escalation
+  stage0_features:
+  - prefix_entropy
+  - probability_margin
+  stage1_primary:
+  - prefix_entropy
+  stage1_fallback:
+  - prefix_entropy
+  - retrieval_score_variance
+  - answer_length_tokens
+  fallback_trigger: oof_auc_ci_low_le_0.5_or_missing_classes_or_no_feasible_cost_improvement
+  regression: standardized_ridge
+  ridge_alpha_grid:
+  - 0.1
+  - 1.0
+  - 10.0
+  quality_tolerance_f1: 0.01
+  quality_tolerance_em: 0.01
+  primary_cost: end_to_end_ms
+  near_zero_overhead_target_ci_upper_ratio: 0.01
+metrics:
+  quality:
+  - answer_em
+  - answer_f1
+  costs:
+  - retrieval_calls
+  - total_input_tokens
+  - total_output_tokens
+  - end_to_end_ms
+  - signal_ms
+  marginal_gains:
+  - delta01_em
+  - delta01_f1
+  - delta12_em
+  - delta12_f1
+  bootstrap_replicates: 2000
+  failures: retained_and_reported
+kaggle:
+  accelerator: NvidiaTeslaT4
+  expected_gpu_count: 2
+  require_gpu_name: T4
+  is_private: true
+  internet: true
+  first_run: smoke_then_calibration_baselines
+  max_run_seconds: 10800
+seed_roles:
+  inference: 42
+  bootstrap: 42
+  calibration: 42

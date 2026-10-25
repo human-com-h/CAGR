@@ -1,0 +1,52 @@
+protocol: cagr-v2-route23-bridge-development-v1
+seed: 42
+native_variant: B
+bridge:
+  instruction: 'Missing search keywords (max 5 words):'
+  max_new_tokens: 8
+  max_query_terms: 24
+  max_bridge_terms: 5
+  max_suffix_tokens: 48
+  retain_rag1_cache: true
+  append_parent_pending_token_once: true
+  reuse_parent_chat_template_suffix: true
+  extra_device_syncs: 0
+  CUDA_events: 0
+  target_increment_ms_planning_only: [120, 160]
+collection:
+  smoke: 20
+  calibration: 200
+  missing_in_situ: 69
+  automatic_retries: 0
+  full_prefix_reference_scope: smoke_technical_only
+  compare_parent_rag_tokens_and_features: true
+  run_same_card_original_rewrite_control: true
+  stage1_old_reference_guard: removed_in_new_development
+selection:
+  stage0_family: targ_dispersion6
+  ridge_alpha_grid: [1.0, 10.0, 100.0]
+  stage0_positive_weights: [0.0, 0.5]
+  stage0_retrieval_rates: [0.35, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.85, 1.0]
+  stage0_latency_penalties: [0.0, 0.00003, 0.0001]
+  stage1_features: [mean_logit_gap, retrieval_score_variance, answer_length_tokens, answer_doc_overlap, question_doc_coverage, uncovered_capitalized_query_ratio, answer_in_best_doc, doc_answer_agreement]
+  actions: [stop, in_situ, kv_bridge, rewrite]
+  stage1_latency_penalties: [0.0, 0.00003, 0.0001, 0.0003]
+  action_thresholds: [0.0, 0.01, 0.03]
+  natural_upgrades_min: 10
+  natural_upgrades_max: 60
+  max_new_queries_per_action: 1
+  all_RAG_EM_F1_floors: -0.01
+  deployment_and_OOF_quality_goal: all_four_means_at_least_TARG
+  delay_goal: lower_than_same_card_TARG
+  frozen_only_after_actual_policy_validation: true
+route3:
+  budget_anchors: [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+  match_budgets: [first_retrieval, total_retrieval]
+  retrieval_ms: [131, 300, 500, 2500]
+  cost_replacement_is_simulation: true
+  new_and_old_test_results: stratified_versions_never_pool_as_v2_blind_2000
+runtime:
+  remote_limit_seconds: 43200
+  internal_wall_seconds: 42000
+  process_timeout_seconds: 42300
+  calibration_only: true

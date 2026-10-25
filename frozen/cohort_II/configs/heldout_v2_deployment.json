@@ -1,0 +1,390 @@
+{
+  "head_scope": "full_200_development",
+  "fold": null,
+  "freeze_sha256": "45ee1bfcf07d4d0d2ebbce1b37a6b89b0246c74dff9ed2d800aa3ff71cde0296",
+  "candidate_id": "fine_382",
+  "candidate_source_sha256": "11056cc0b4de28e45d9346c89a41bef430cd48c77f39dd6a9e7cec2b7a88858b",
+  "full_head_sha256": "16605a3a0621adbfed1e6f12d5f399cfddf4c4422eb50afedc7ac1b04227b526",
+  "fine": {
+    "deployment": {
+      "threshold0": 0.3324547106961593,
+      "threshold1": 0.08009160634576197,
+      "trivia_confidence_threshold": 11.237109375,
+      "action_heads": {
+        "in_situ": {
+          "mean": [
+            8.910686197916668,
+            23.92826192780197,
+            5.13
+          ],
+          "scale": [
+            3.084264580595816,
+            50.494317693490544,
+            8.258516815990621
+          ],
+          "coefficients": [
+            -0.01565693383221407,
+            0.008456590671865398,
+            -0.0048145995020760215,
+            -0.0036819898136269194
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "retrieval_score_variance",
+            "answer_length_tokens"
+          ]
+        },
+        "kv_bridge": {
+          "mean": [
+            8.910686197916668,
+            23.92826192780197,
+            5.13
+          ],
+          "scale": [
+            3.084264580595816,
+            50.494317693490544,
+            8.258516815990621
+          ],
+          "coefficients": [
+            0.004300902081262608,
+            -0.006464509626305646,
+            -0.005755421874616813,
+            -0.0047347422879039334
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "retrieval_score_variance",
+            "answer_length_tokens"
+          ]
+        },
+        "rewrite": {
+          "mean": [
+            8.910686197916668,
+            23.92826192780197,
+            5.13
+          ],
+          "scale": [
+            3.084264580595816,
+            50.494317693490544,
+            8.258516815990621
+          ],
+          "coefficients": [
+            0.02806528903547332,
+            -0.020064934179170688,
+            0.016598752632177527,
+            0.0010339539688110802
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "retrieval_score_variance",
+            "answer_length_tokens"
+          ]
+        }
+      }
+    },
+    "suppress_high_confidence_trivia": true
+  },
+  "router": {
+    "candidate_id": "v04_pareto_candidate",
+    "candidate_only_not_frozen": false,
+    "selection_scope": "exploratory full-calibration parameter search on OOF gain predictions",
+    "lambda": 3e-05,
+    "utility_threshold": 0.0,
+    "first_retrieval_mode": "learned_utility",
+    "feature_schema": "logit_gap_mean_v1",
+    "stage0": {
+      "feature_schema": "logit_gap_mean_v1",
+      "gain": {
+        "mean": [
+          5.582228515625001,
+          0.21895415118086167,
+          15.52,
+          3.415
+        ],
+        "scale": [
+          2.7359215799516665,
+          0.171406753170686,
+          6.676046734408022,
+          2.2164780621517552
+        ],
+        "coefficients": [
+          0.053900863664823585,
+          -0.03178200335041159,
+          0.03195391681190011,
+          0.0015912097091459658,
+          0.03738284945756698
+        ],
+        "alpha": 100.0,
+        "feature_names": [
+          "mean_logit_gap",
+          "gap_uncertainty_of_mean",
+          "query_term_count",
+          "query_capitalized_count"
+        ]
+      },
+      "cost": {
+        "mean": [
+          5.582228515625001,
+          0.21895415118086167,
+          15.52,
+          3.415
+        ],
+        "scale": [
+          2.7359215799516665,
+          0.171406753170686,
+          6.676046734408022,
+          2.2164780621517552
+        ],
+        "coefficients": [
+          537.8398477249924,
+          -22.56302847598052,
+          23.088941138858882,
+          10.562244268222944,
+          -2.162900848567109
+        ],
+        "alpha": 100.0,
+        "feature_names": [
+          "mean_logit_gap",
+          "gap_uncertainty_of_mean",
+          "query_term_count",
+          "query_capitalized_count"
+        ]
+      }
+    },
+    "stage1": {
+      "feature_schema": "logit_gap_mean_v1",
+      "gain": {
+        "mean": [
+          8.910686197916668,
+          23.92826192780197,
+          5.13
+        ],
+        "scale": [
+          3.084264580595816,
+          50.494317693490544,
+          8.258516815990621
+        ],
+        "coefficients": [
+          0.02806528903547332,
+          -0.020064934179170688,
+          0.016598752632177527,
+          0.0010339539688110802
+        ],
+        "alpha": 100.0,
+        "feature_names": [
+          "mean_logit_gap",
+          "retrieval_score_variance",
+          "answer_length_tokens"
+        ]
+      },
+      "cost": {
+        "mean": [
+          8.910686197916668,
+          23.92826192780197,
+          5.13
+        ],
+        "scale": [
+          3.084264580595816,
+          50.494317693490544,
+          8.258516815990621
+        ],
+        "coefficients": [
+          1275.0931067850374,
+          -22.881271896972862,
+          -2.0181751823990113,
+          204.71842779869783
+        ],
+        "alpha": 10.0,
+        "feature_names": [
+          "mean_logit_gap",
+          "retrieval_score_variance",
+          "answer_length_tokens"
+        ]
+      }
+    },
+    "text_feature_limits": {
+      "max_documents": 5,
+      "max_document_chars": 1024,
+      "max_document_terms": 64,
+      "max_question_chars": 1024,
+      "max_question_terms": 64,
+      "max_answer_chars": 512,
+      "max_answer_terms": 64
+    },
+    "uses_text_features": false,
+    "OOF_exploratory_replay": {
+      "variant": "gap_base",
+      "lambda0": 0.0,
+      "lambda1": 0.0002,
+      "threshold0": 0.06643697151231595,
+      "threshold1": -0.20252241348899253,
+      "constraint": "point_floor",
+      "tier_counts": [
+        118,
+        63,
+        19
+      ],
+      "proxy_ms": 546.701429569976,
+      "by_dataset": {
+        "hotpotqa": {
+          "em": 0.18,
+          "f1": 0.2840376405203991,
+          "tier_counts": [
+            49,
+            38,
+            13
+          ],
+          "em_minus_rag": 0.0,
+          "f1_minus_rag": -0.009174603174603176
+        },
+        "triviaqa": {
+          "em": 0.45,
+          "f1": 0.48179551820728295,
+          "tier_counts": [
+            69,
+            25,
+            6
+          ],
+          "em_minus_rag": 0.04,
+          "f1_minus_rag": 0.026954838709677423
+        }
+      }
+    },
+    "old_router_sha256": "2114a1b6b5d34988a8cc785efc4f2b15b9778208dc15fb2b0735a8e09033b517",
+    "ready_for_held_out_test": false,
+    "GPU_validated": false,
+    "routing": {
+      "lambda0": 0.0,
+      "lambda1": 0.0002,
+      "threshold0": 0.06643697151231595,
+      "threshold1": -0.20252241348899253
+    },
+    "upgrade_mode": "evidence_gap",
+    "sparse_upgrade_target": [
+      0.075,
+      0.15
+    ],
+    "cost_scenario": {
+      "retrieval_ms_per_call": 131.0,
+      "routing_allowance_ms_per_question": 0.5,
+      "GPU_measured": false,
+      "actual_component_sensitivity_also_reported": true
+    },
+    "online_development_parameters_frozen": true,
+    "actual_component_proxy_sensitivity": {
+      "tier_counts": [
+        118,
+        63,
+        19
+      ],
+      "proxy_ms": 562.1750035299765,
+      "by_dataset": {
+        "hotpotqa": {
+          "em": 0.18,
+          "f1": 0.2840376405203991,
+          "tier_counts": [
+            49,
+            38,
+            13
+          ],
+          "em_minus_rag": 0.0,
+          "f1_minus_rag": -0.009174603174603176
+        },
+        "triviaqa": {
+          "em": 0.45,
+          "f1": 0.48179551820728295,
+          "tier_counts": [
+            69,
+            25,
+            6
+          ],
+          "em_minus_rag": 0.04,
+          "f1_minus_rag": 0.026954838709677423
+        }
+      }
+    },
+    "primary_online_method": "cagr",
+    "paired_experimental_method": "cagr_in_situ",
+    "expansion_variant": "question_answer",
+    "statistical_acceptance": {
+      "quality": "per-dataset EM/F1 sample means >= Always-RAG minus .01",
+      "CIs": "quality recovery/cost superiority/overhead; not a CI noninferiority hard gate"
+    },
+    "test_execution_allowed": false,
+    "methodology_paper": true
+  },
+  "baselines": {
+    "status": "frozen_for_online_development_validation",
+    "seed": 42,
+    "targ_style": {
+      "threshold": 0.322316956977953,
+      "training_n": 200,
+      "training_metrics": {
+        "tier_counts": [
+          94,
+          106,
+          0
+        ],
+        "proxy_ms": 490.6711407699862,
+        "by_dataset": {
+          "hotpotqa": {
+            "em": 0.18,
+            "f1": 0.28364081512357375,
+            "tier_counts": [
+              40,
+              60,
+              0
+            ],
+            "em_minus_rag": 0.0,
+            "f1_minus_rag": -0.00957142857142857
+          },
+          "triviaqa": {
+            "em": 0.46,
+            "f1": 0.49419551820728286,
+            "tier_counts": [
+              54,
+              46,
+              0
+            ],
+            "em_minus_rag": 0.05,
+            "f1_minus_rag": 0.03935483870967742
+          }
+        }
+      },
+      "pilot_k": 5,
+      "beta": 3.0,
+      "paper_pilot_k": 20,
+      "label": "same-backbone budget adaptation"
+    },
+    "sugar_l_style_budgeted": {
+      "low_threshold": 0.0,
+      "high_threshold": 0.34657359027997264,
+      "training_n": 200,
+      "training_mean_delta01_f1": 0.05390086366482361,
+      "training_mean_delta12_f1": 0.028065289035473322,
+      "rule": "quality-first lambda=0; agreement direct if initial retrieval gain positive, disagreement may upgrade if marginal upgrade gain positive",
+      "semantic_support": [
+        0.0,
+        0.6931471805599453
+      ],
+      "empirical_semantic_scores_available": false,
+      "calibration_kind": "training-fold marginal-gain prior + exact entropy support; empirical semantic calibration requires GPU",
+      "samples": 2,
+      "sample_max_tokens": 8,
+      "sampling_temperature": 1.0,
+      "entailment_backend": "same_backbone_bidirectional_judge",
+      "entailment_max_tokens": 4,
+      "max_retrieval_rounds": 2,
+      "semantic_entropy": "unweighted_mean_negative_log_empirical_cluster_mass",
+      "feedback_after_each_retrieval": true,
+      "label": "same-backbone budget adaptation; no semantic-score data invented"
+    },
+    "test_read": false,
+    "GPU_measured": false,
+    "fitting_wall_ms": 225.07009999981165,
+    "script_sha256": "b9b63327aa3599f4610ef3e87771dcec0355bb73e82b72a07313b98e490506c9"
+  }
+}

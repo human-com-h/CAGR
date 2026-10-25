@@ -1,0 +1,27 @@
+protocol: cagr-v2-fine-gpu-v2
+candidate: fine_382
+candidate_sha256: 11056cc0b4de28e45d9346c89a41bef430cd48c77f39dd6a9e7cec2b7a88858b
+seed: 42
+normal_methods: 11
+independent_method: cagr_v2_full
+pairs_per_question:
+  smoke: 4
+  calibration: 12
+bootstrap:
+  unit: question_mean_ratio
+  repetitions: 20000
+  seed: 42
+  upper_one_sided_probability: 0.95
+overhead_limit: 0.005
+smoke_independent_upper_is_hard_gate: false
+calibration_independent_upper_is_hard_gate: true
+RAG_latency_anchor_ms: 588.64
+latency_limit_ms: 550
+expected_execution_rows:
+  smoke: 440
+  calibration: 7000
+  total: 7440
+remote_seconds: 43200
+process_seconds: 42300
+internal_seconds: 42000
+new_or_old_test1000_included: false

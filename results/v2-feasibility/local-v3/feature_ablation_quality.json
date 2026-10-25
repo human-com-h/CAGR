@@ -1,0 +1,78 @@
+{
+  "gap_base": {
+    "hotpotqa": {
+      "n": 100,
+      "em": 0.2,
+      "f1": 0.3048690571657693,
+      "tier_counts": [
+        22,
+        50,
+        28
+      ],
+      "new_GPU_E2E_ms": null,
+      "scope": "original fivefold OOF heads; common lambda3e-5/threshold0, known potential answers only"
+    },
+    "triviaqa": {
+      "n": 100,
+      "em": 0.43,
+      "f1": 0.4657740128309388,
+      "tier_counts": [
+        40,
+        43,
+        17
+      ],
+      "new_GPU_E2E_ms": null,
+      "scope": "original fivefold OOF heads; common lambda3e-5/threshold0, known potential answers only"
+    },
+    "overall": {
+      "n": 200,
+      "em": 0.315,
+      "f1": 0.38532153499835403,
+      "tier_counts": [
+        62,
+        93,
+        45
+      ],
+      "new_GPU_E2E_ms": null,
+      "scope": "original fivefold OOF heads; common lambda3e-5/threshold0, known potential answers only"
+    }
+  },
+  "gap_text": {
+    "hotpotqa": {
+      "n": 100,
+      "em": 0.18,
+      "f1": 0.28594240242516106,
+      "tier_counts": [
+        22,
+        48,
+        30
+      ],
+      "new_GPU_E2E_ms": null,
+      "scope": "original fivefold OOF heads; common lambda3e-5/threshold0, known potential answers only"
+    },
+    "triviaqa": {
+      "n": 100,
+      "em": 0.42,
+      "f1": 0.4607740128309388,
+      "tier_counts": [
+        40,
+        40,
+        20
+      ],
+      "new_GPU_E2E_ms": null,
+      "scope": "original fivefold OOF heads; common lambda3e-5/threshold0, known potential answers only"
+    },
+    "overall": {
+      "n": 200,
+      "em": 0.3,
+      "f1": 0.37335820762804994,
+      "tier_counts": [
+        62,
+        88,
+        50
+      ],
+      "new_GPU_E2E_ms": null,
+      "scope": "original fivefold OOF heads; common lambda3e-5/threshold0, known potential answers only"
+    }
+  }
+}

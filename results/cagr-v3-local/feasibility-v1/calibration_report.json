@@ -1,0 +1,1321 @@
+{
+  "selected": {
+    "id": "fused_a1_r0.5_ridge10_0.9",
+    "key": "fused_a1_r0.5",
+    "mode": "fused",
+    "alpha": 1.0,
+    "rate": 0.5,
+    "family": "ridge10",
+    "quantile": 0.9,
+    "reports": {
+      "OOF": {
+        "hotpotqa": {
+          "n": 100,
+          "em": 0.18,
+          "f1": 0.271796336996337,
+          "branches": [
+            49,
+            46,
+            5
+          ],
+          "first_rate": 0.51,
+          "retrievals_per_question": 0.56,
+          "latency_proxy_ms": 560.701481190001,
+          "upgrades_positive": 2,
+          "upgrades_zero": 3,
+          "upgrades_negative": 0,
+          "upgrade_f1_pp": 0.4761904761904762
+        },
+        "triviaqa": {
+          "n": 100,
+          "em": 0.41,
+          "f1": 0.46648829854522456,
+          "branches": [
+            52,
+            46,
+            2
+          ],
+          "first_rate": 0.48,
+          "retrievals_per_question": 0.5,
+          "latency_proxy_ms": 472.9782037299956,
+          "upgrades_positive": 0,
+          "upgrades_zero": 1,
+          "upgrades_negative": 1,
+          "upgrade_f1_pp": -0.09523809523809523
+        },
+        "overall": {
+          "n": 200,
+          "em": 0.295,
+          "f1": 0.3691423177707807,
+          "branches": [
+            101,
+            92,
+            7
+          ],
+          "first_rate": 0.495,
+          "retrievals_per_question": 0.53,
+          "latency_proxy_ms": 516.8398424599983,
+          "upgrades_positive": 2,
+          "upgrades_zero": 4,
+          "upgrades_negative": 1,
+          "upgrade_f1_pp": 0.19047619047619052
+        }
+      },
+      "Full": {
+        "hotpotqa": {
+          "n": 100,
+          "em": 0.21,
+          "f1": 0.3232944203083738,
+          "branches": [
+            42,
+            53,
+            5
+          ],
+          "first_rate": 0.58,
+          "retrievals_per_question": 0.63,
+          "latency_proxy_ms": 638.7247978599995,
+          "upgrades_positive": 2,
+          "upgrades_zero": 2,
+          "upgrades_negative": 1,
+          "upgrade_f1_pp": 0.36885595025129914
+        },
+        "triviaqa": {
+          "n": 100,
+          "em": 0.49,
+          "f1": 0.540843137254902,
+          "branches": [
+            58,
+            37,
+            5
+          ],
+          "first_rate": 0.42,
+          "retrievals_per_question": 0.47,
+          "latency_proxy_ms": 453.7080892200025,
+          "upgrades_positive": 0,
+          "upgrades_zero": 5,
+          "upgrades_negative": 0,
+          "upgrade_f1_pp": 0.0
+        },
+        "overall": {
+          "n": 200,
+          "em": 0.35,
+          "f1": 0.43206877878163785,
+          "branches": [
+            100,
+            90,
+            10
+          ],
+          "first_rate": 0.5,
+          "retrievals_per_question": 0.55,
+          "latency_proxy_ms": 546.216443540001,
+          "upgrades_positive": 2,
+          "upgrades_zero": 7,
+          "upgrades_negative": 1,
+          "upgrade_f1_pp": 0.18442797512564957
+        }
+      }
+    },
+    "objective": [
+      0.011415906699,
+      0.029463525746,
+      30.797365459998332,
+      -0.3691423177707807,
+      516.7973654599983,
+      "fused_a1_r0.5_ridge10_0.9"
+    ],
+    "tiers": {
+      "OOF": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        2,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        2,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        2,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        2,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "Full": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        2,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        2,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        2,
+        0,
+        1,
+        2,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "reports": {
+    "OOF": {
+      "hotpotqa": {
+        "n": 100,
+        "em": 0.18,
+        "f1": 0.271796336996337,
+        "branches": [
+          49,
+          46,
+          5
+        ],
+        "first_rate": 0.51,
+        "retrievals_per_question": 0.56,
+        "latency_proxy_ms": 560.701481190001,
+        "upgrades_positive": 2,
+        "upgrades_zero": 3,
+        "upgrades_negative": 0,
+        "upgrade_f1_pp": 0.4761904761904762
+      },
+      "triviaqa": {
+        "n": 100,
+        "em": 0.41,
+        "f1": 0.46648829854522456,
+        "branches": [
+          52,
+          46,
+          2
+        ],
+        "first_rate": 0.48,
+        "retrievals_per_question": 0.5,
+        "latency_proxy_ms": 472.9782037299956,
+        "upgrades_positive": 0,
+        "upgrades_zero": 1,
+        "upgrades_negative": 1,
+        "upgrade_f1_pp": -0.09523809523809523
+      },
+      "overall": {
+        "n": 200,
+        "em": 0.295,
+        "f1": 0.3691423177707807,
+        "branches": [
+          101,
+          92,
+          7
+        ],
+        "first_rate": 0.495,
+        "retrievals_per_question": 0.53,
+        "latency_proxy_ms": 516.8398424599983,
+        "upgrades_positive": 2,
+        "upgrades_zero": 4,
+        "upgrades_negative": 1,
+        "upgrade_f1_pp": 0.19047619047619052
+      }
+    },
+    "Full": {
+      "hotpotqa": {
+        "n": 100,
+        "em": 0.21,
+        "f1": 0.3232944203083738,
+        "branches": [
+          42,
+          53,
+          5
+        ],
+        "first_rate": 0.58,
+        "retrievals_per_question": 0.63,
+        "latency_proxy_ms": 638.7247978599995,
+        "upgrades_positive": 2,
+        "upgrades_zero": 2,
+        "upgrades_negative": 1,
+        "upgrade_f1_pp": 0.36885595025129914
+      },
+      "triviaqa": {
+        "n": 100,
+        "em": 0.49,
+        "f1": 0.540843137254902,
+        "branches": [
+          58,
+          37,
+          5
+        ],
+        "first_rate": 0.42,
+        "retrievals_per_question": 0.47,
+        "latency_proxy_ms": 453.7080892200025,
+        "upgrades_positive": 0,
+        "upgrades_zero": 5,
+        "upgrades_negative": 0,
+        "upgrade_f1_pp": 0.0
+      },
+      "overall": {
+        "n": 200,
+        "em": 0.35,
+        "f1": 0.43206877878163785,
+        "branches": [
+          100,
+          90,
+          10
+        ],
+        "first_rate": 0.5,
+        "retrievals_per_question": 0.55,
+        "latency_proxy_ms": 546.216443540001,
+        "upgrades_positive": 2,
+        "upgrades_zero": 7,
+        "upgrades_negative": 1,
+        "upgrade_f1_pp": 0.18442797512564957
+      }
+    }
+  },
+  "baselines": {
+    "Always-RAG": {
+      "hotpotqa": {
+        "n": 100,
+        "em": 0.18,
+        "f1": 0.2932122436950023,
+        "branches": [
+          0,
+          100,
+          0
+        ],
+        "first_rate": 1.0,
+        "retrievals_per_question": 1.0,
+        "latency_proxy_ms": 614.6477637599888,
+        "upgrades_positive": 0,
+        "upgrades_zero": 0,
+        "upgrades_negative": 0,
+        "upgrade_f1_pp": 0.0
+      },
+      "triviaqa": {
+        "n": 100,
+        "em": 0.41,
+        "f1": 0.4548406794976054,
+        "branches": [
+          0,
+          100,
+          0
+        ],
+        "first_rate": 1.0,
+        "retrievals_per_question": 1.0,
+        "latency_proxy_ms": 562.6336044599975,
+        "upgrades_positive": 0,
+        "upgrades_zero": 0,
+        "upgrades_negative": 0,
+        "upgrade_f1_pp": 0.0
+      },
+      "overall": {
+        "n": 200,
+        "em": 0.295,
+        "f1": 0.37402646159630387,
+        "branches": [
+          0,
+          200,
+          0
+        ],
+        "first_rate": 1.0,
+        "retrievals_per_question": 1.0,
+        "latency_proxy_ms": 588.6406841099931,
+        "upgrades_positive": 0,
+        "upgrades_zero": 0,
+        "upgrades_negative": 0,
+        "upgrade_f1_pp": 0.0
+      }
+    },
+    "Direct": {
+      "hotpotqa": {
+        "n": 100,
+        "em": 0.11,
+        "f1": 0.15863882783882782,
+        "branches": [
+          100,
+          0,
+          0
+        ],
+        "first_rate": 0.0,
+        "retrievals_per_question": 0.0,
+        "latency_proxy_ms": 205.76243551000675,
+        "upgrades_positive": 0,
+        "upgrades_zero": 0,
+        "upgrades_negative": 0,
+        "upgrade_f1_pp": 0.0
+      },
+      "triviaqa": {
+        "n": 100,
+        "em": 0.45,
+        "f1": 0.4816123680241327,
+        "branches": [
+          100,
+          0,
+          0
+        ],
+        "first_rate": 0.0,
+        "retrievals_per_question": 0.0,
+        "latency_proxy_ms": 182.15345715000058,
+        "upgrades_positive": 0,
+        "upgrades_zero": 0,
+        "upgrades_negative": 0,
+        "upgrade_f1_pp": 0.0
+      },
+      "overall": {
+        "n": 200,
+        "em": 0.28,
+        "f1": 0.32012559793148027,
+        "branches": [
+          200,
+          0,
+          0
+        ],
+        "first_rate": 0.0,
+        "retrievals_per_question": 0.0,
+        "latency_proxy_ms": 193.9579463300037,
+        "upgrades_positive": 0,
+        "upgrades_zero": 0,
+        "upgrades_negative": 0,
+        "upgrade_f1_pp": 0.0
+      }
+    },
+    "TARG-OOF": {
+      "hotpotqa": {
+        "n": 100,
+        "em": 0.18,
+        "f1": 0.2719741484569071,
+        "branches": [
+          34,
+          66,
+          0
+        ],
+        "first_rate": 0.66,
+        "retrievals_per_question": 0.66,
+        "latency_proxy_ms": 615.8049630799886,
+        "upgrades_positive": 0,
+        "upgrades_zero": 0,
+        "upgrades_negative": 0,
+        "upgrade_f1_pp": 0.0
+      },
+      "triviaqa": {
+        "n": 100,
+        "em": 0.46,
+        "f1": 0.49577401283093875,
+        "branches": [
+          48,
+          52,
+          0
+        ],
+        "first_rate": 0.52,
+        "retrievals_per_question": 0.52,
+        "latency_proxy_ms": 458.5384037499857,
+        "upgrades_positive": 0,
+        "upgrades_zero": 0,
+        "upgrades_negative": 0,
+        "upgrade_f1_pp": 0.0
+      },
+      "overall": {
+        "n": 200,
+        "em": 0.32,
+        "f1": 0.3838740806439229,
+        "branches": [
+          82,
+          118,
+          0
+        ],
+        "first_rate": 0.59,
+        "retrievals_per_question": 0.59,
+        "latency_proxy_ms": 537.1716834149872,
+        "upgrades_positive": 0,
+        "upgrades_zero": 0,
+        "upgrades_negative": 0,
+        "upgrade_f1_pp": 0.0
+      }
+    },
+    "TARG-Full": {
+      "hotpotqa": {
+        "n": 100,
+        "em": 0.18,
+        "f1": 0.28364081512357375,
+        "branches": [
+          40,
+          60,
+          0
+        ],
+        "first_rate": 0.6,
+        "retrievals_per_question": 0.6,
+        "latency_proxy_ms": 586.6009379999894,
+        "upgrades_positive": 0,
+        "upgrades_zero": 0,
+        "upgrades_negative": 0,
+        "upgrade_f1_pp": 0.0
+      },
+      "triviaqa": {
+        "n": 100,
+        "em": 0.46,
+        "f1": 0.49419551820728286,
+        "branches": [
+          54,
+          46,
+          0
+        ],
+        "first_rate": 0.46,
+        "retrievals_per_question": 0.46,
+        "latency_proxy_ms": 434.9388552199962,
+        "upgrades_positive": 0,
+        "upgrades_zero": 0,
+        "upgrades_negative": 0,
+        "upgrade_f1_pp": 0.0
+      },
+      "overall": {
+        "n": 200,
+        "em": 0.32,
+        "f1": 0.3889181666654283,
+        "branches": [
+          94,
+          106,
+          0
+        ],
+        "first_rate": 0.53,
+        "retrievals_per_question": 0.53,
+        "latency_proxy_ms": 510.7698966099927,
+        "upgrades_positive": 0,
+        "upgrades_zero": 0,
+        "upgrades_negative": 0,
+        "upgrade_f1_pp": 0.0
+      }
+    },
+    "fine_382-OOF": {
+      "hotpotqa": {
+        "n": 100,
+        "em": 0.19,
+        "f1": 0.28488525956801813,
+        "branches": [
+          44,
+          52,
+          4
+        ],
+        "first_rate": 0.56,
+        "retrievals_per_question": 0.6,
+        "latency_proxy_ms": 625.7088254400009,
+        "upgrades_positive": 2,
+        "upgrades_zero": 2,
+        "upgrades_negative": 0,
+        "upgrade_f1_pp": 1.1111111111111112
+      },
+      "triviaqa": {
+        "n": 100,
+        "em": 0.46,
+        "f1": 0.4951288515406162,
+        "branches": [
+          57,
+          42,
+          1
+        ],
+        "first_rate": 0.43,
+        "retrievals_per_question": 0.44,
+        "latency_proxy_ms": 424.89790149999897,
+        "upgrades_positive": 0,
+        "upgrades_zero": 1,
+        "upgrades_negative": 0,
+        "upgrade_f1_pp": 0.0
+      },
+      "overall": {
+        "n": 200,
+        "em": 0.325,
+        "f1": 0.3900070555543172,
+        "branches": [
+          101,
+          94,
+          5
+        ],
+        "first_rate": 0.495,
+        "retrievals_per_question": 0.52,
+        "latency_proxy_ms": 525.3033634699999,
+        "upgrades_positive": 2,
+        "upgrades_zero": 3,
+        "upgrades_negative": 0,
+        "upgrade_f1_pp": 0.5555555555555556
+      }
+    },
+    "fine_382-Full": {
+      "hotpotqa": {
+        "n": 100,
+        "em": 0.19,
+        "f1": 0.28888525956801814,
+        "branches": [
+          44,
+          52,
+          4
+        ],
+        "first_rate": 0.56,
+        "retrievals_per_question": 0.6,
+        "latency_proxy_ms": 627.246286990001,
+        "upgrades_positive": 2,
+        "upgrades_zero": 2,
+        "upgrades_negative": 0,
+        "upgrade_f1_pp": 1.1111111111111112
+      },
+      "triviaqa": {
+        "n": 100,
+        "em": 0.46,
+        "f1": 0.4951288515406162,
+        "branches": [
+          56,
+          43,
+          1
+        ],
+        "first_rate": 0.44,
+        "retrievals_per_question": 0.45,
+        "latency_proxy_ms": 430.01943758999727,
+        "upgrades_positive": 0,
+        "upgrades_zero": 1,
+        "upgrades_negative": 0,
+        "upgrade_f1_pp": 0.0
+      },
+      "overall": {
+        "n": 200,
+        "em": 0.325,
+        "f1": 0.3920070555543172,
+        "branches": [
+          100,
+          95,
+          5
+        ],
+        "first_rate": 0.5,
+        "retrievals_per_question": 0.525,
+        "latency_proxy_ms": 528.6328622899991,
+        "upgrades_positive": 2,
+        "upgrades_zero": 3,
+        "upgrades_negative": 0,
+        "upgrade_f1_pp": 0.5555555555555556
+      }
+    }
+  },
+  "ablations": {
+    "fused": {
+      "selected_id": "fused_a1_r0.5_ridge10_0.9",
+      "reports": {
+        "OOF": {
+          "hotpotqa": {
+            "n": 100,
+            "em": 0.18,
+            "f1": 0.271796336996337,
+            "branches": [
+              49,
+              46,
+              5
+            ],
+            "first_rate": 0.51,
+            "retrievals_per_question": 0.56,
+            "latency_proxy_ms": 560.701481190001,
+            "upgrades_positive": 2,
+            "upgrades_zero": 3,
+            "upgrades_negative": 0,
+            "upgrade_f1_pp": 0.4761904761904762
+          },
+          "triviaqa": {
+            "n": 100,
+            "em": 0.41,
+            "f1": 0.46648829854522456,
+            "branches": [
+              52,
+              46,
+              2
+            ],
+            "first_rate": 0.48,
+            "retrievals_per_question": 0.5,
+            "latency_proxy_ms": 472.9782037299956,
+            "upgrades_positive": 0,
+            "upgrades_zero": 1,
+            "upgrades_negative": 1,
+            "upgrade_f1_pp": -0.09523809523809523
+          },
+          "overall": {
+            "n": 200,
+            "em": 0.295,
+            "f1": 0.3691423177707807,
+            "branches": [
+              101,
+              92,
+              7
+            ],
+            "first_rate": 0.495,
+            "retrievals_per_question": 0.53,
+            "latency_proxy_ms": 516.8398424599983,
+            "upgrades_positive": 2,
+            "upgrades_zero": 4,
+            "upgrades_negative": 1,
+            "upgrade_f1_pp": 0.19047619047619052
+          }
+        },
+        "Full": {
+          "hotpotqa": {
+            "n": 100,
+            "em": 0.21,
+            "f1": 0.3232944203083738,
+            "branches": [
+              42,
+              53,
+              5
+            ],
+            "first_rate": 0.58,
+            "retrievals_per_question": 0.63,
+            "latency_proxy_ms": 638.7247978599995,
+            "upgrades_positive": 2,
+            "upgrades_zero": 2,
+            "upgrades_negative": 1,
+            "upgrade_f1_pp": 0.36885595025129914
+          },
+          "triviaqa": {
+            "n": 100,
+            "em": 0.49,
+            "f1": 0.540843137254902,
+            "branches": [
+              58,
+              37,
+              5
+            ],
+            "first_rate": 0.42,
+            "retrievals_per_question": 0.47,
+            "latency_proxy_ms": 453.7080892200025,
+            "upgrades_positive": 0,
+            "upgrades_zero": 5,
+            "upgrades_negative": 0,
+            "upgrade_f1_pp": 0.0
+          },
+          "overall": {
+            "n": 200,
+            "em": 0.35,
+            "f1": 0.43206877878163785,
+            "branches": [
+              100,
+              90,
+              10
+            ],
+            "first_rate": 0.5,
+            "retrievals_per_question": 0.55,
+            "latency_proxy_ms": 546.216443540001,
+            "upgrades_positive": 2,
+            "upgrades_zero": 7,
+            "upgrades_negative": 1,
+            "upgrade_f1_pp": 0.18442797512564957
+          }
+        }
+      },
+      "OOF_mse": 0.23965231670067286,
+      "OOF_benefit_auc": 0.6286919831223629
+    },
+    "structure": {
+      "selected_id": "structure_a100_r0.55_ridge10_0.95",
+      "reports": {
+        "OOF": {
+          "hotpotqa": {
+            "n": 100,
+            "em": 0.16,
+            "f1": 0.24282930402930403,
+            "branches": [
+              48,
+              48,
+              4
+            ],
+            "first_rate": 0.52,
+            "retrievals_per_question": 0.56,
+            "latency_proxy_ms": 571.6837251300075,
+            "upgrades_positive": 1,
+            "upgrades_zero": 3,
+            "upgrades_negative": 0,
+            "upgrade_f1_pp": 0.33333333333333326
+          },
+          "triviaqa": {
+            "n": 100,
+            "em": 0.43,
+            "f1": 0.4791764705882353,
+            "branches": [
+              46,
+              51,
+              3
+            ],
+            "first_rate": 0.54,
+            "retrievals_per_question": 0.57,
+            "latency_proxy_ms": 481.9230464500065,
+            "upgrades_positive": 0,
+            "upgrades_zero": 3,
+            "upgrades_negative": 0,
+            "upgrade_f1_pp": 0.0
+          },
+          "overall": {
+            "n": 200,
+            "em": 0.295,
+            "f1": 0.36100288730876967,
+            "branches": [
+              94,
+              99,
+              7
+            ],
+            "first_rate": 0.53,
+            "retrievals_per_question": 0.565,
+            "latency_proxy_ms": 526.8033857900069,
+            "upgrades_positive": 1,
+            "upgrades_zero": 6,
+            "upgrades_negative": 0,
+            "upgrade_f1_pp": 0.16666666666666663
+          }
+        },
+        "Full": {
+          "hotpotqa": {
+            "n": 100,
+            "em": 0.19,
+            "f1": 0.30644835164835166,
+            "branches": [
+              38,
+              58,
+              4
+            ],
+            "first_rate": 0.62,
+            "retrievals_per_question": 0.66,
+            "latency_proxy_ms": 639.1348466300046,
+            "upgrades_positive": 2,
+            "upgrades_zero": 2,
+            "upgrades_negative": 0,
+            "upgrade_f1_pp": 1.333333333333333
+          },
+          "triviaqa": {
+            "n": 100,
+            "em": 0.47,
+            "f1": 0.5141764705882353,
+            "branches": [
+              52,
+              46,
+              2
+            ],
+            "first_rate": 0.48,
+            "retrievals_per_question": 0.5,
+            "latency_proxy_ms": 448.2775903000089,
+            "upgrades_positive": 0,
+            "upgrades_zero": 2,
+            "upgrades_negative": 0,
+            "upgrade_f1_pp": 0.0
+          },
+          "overall": {
+            "n": 200,
+            "em": 0.33,
+            "f1": 0.4103124111182935,
+            "branches": [
+              90,
+              104,
+              6
+            ],
+            "first_rate": 0.55,
+            "retrievals_per_question": 0.58,
+            "latency_proxy_ms": 543.7062184650067,
+            "upgrades_positive": 2,
+            "upgrades_zero": 4,
+            "upgrades_negative": 0,
+            "upgrade_f1_pp": 0.6666666666666665
+          }
+        }
+      },
+      "OOF_mse": 0.1883935740397888,
+      "OOF_benefit_auc": 0.4984930681133213
+    },
+    "pilot": {
+      "selected_id": "pilot_a100_r0.5_hurdle_C1_0.9",
+      "reports": {
+        "OOF": {
+          "hotpotqa": {
+            "n": 100,
+            "em": 0.19,
+            "f1": 0.2774627079594201,
+            "branches": [
+              44,
+              50,
+              6
+            ],
+            "first_rate": 0.56,
+            "retrievals_per_question": 0.62,
+            "latency_proxy_ms": 703.5179188600015,
+            "upgrades_positive": 2,
+            "upgrades_zero": 3,
+            "upgrades_negative": 1,
+            "upgrade_f1_pp": 0.36885595025129914
+          },
+          "triviaqa": {
+            "n": 100,
+            "em": 0.46,
+            "f1": 0.4941764705882353,
+            "branches": [
+              57,
+              41,
+              2
+            ],
+            "first_rate": 0.43,
+            "retrievals_per_question": 0.45,
+            "latency_proxy_ms": 436.3144266799967,
+            "upgrades_positive": 0,
+            "upgrades_zero": 1,
+            "upgrades_negative": 1,
+            "upgrade_f1_pp": -0.09523809523809523
+          },
+          "overall": {
+            "n": 200,
+            "em": 0.325,
+            "f1": 0.38581958927382765,
+            "branches": [
+              101,
+              91,
+              8
+            ],
+            "first_rate": 0.495,
+            "retrievals_per_question": 0.535,
+            "latency_proxy_ms": 569.9161727699992,
+            "upgrades_positive": 2,
+            "upgrades_zero": 4,
+            "upgrades_negative": 2,
+            "upgrade_f1_pp": 0.13680892750660195
+          }
+        },
+        "Full": {
+          "hotpotqa": {
+            "n": 100,
+            "em": 0.19,
+            "f1": 0.2814627079594201,
+            "branches": [
+              44,
+              47,
+              9
+            ],
+            "first_rate": 0.56,
+            "retrievals_per_question": 0.65,
+            "latency_proxy_ms": 763.5575385100018,
+            "upgrades_positive": 2,
+            "upgrades_zero": 6,
+            "upgrades_negative": 1,
+            "upgrade_f1_pp": 0.36885595025129914
+          },
+          "triviaqa": {
+            "n": 100,
+            "em": 0.46,
+            "f1": 0.4941764705882353,
+            "branches": [
+              56,
+              43,
+              1
+            ],
+            "first_rate": 0.44,
+            "retrievals_per_question": 0.45,
+            "latency_proxy_ms": 421.84931529999665,
+            "upgrades_positive": 0,
+            "upgrades_zero": 0,
+            "upgrades_negative": 1,
+            "upgrade_f1_pp": -0.09523809523809523
+          },
+          "overall": {
+            "n": 200,
+            "em": 0.325,
+            "f1": 0.38781958927382765,
+            "branches": [
+              100,
+              90,
+              10
+            ],
+            "first_rate": 0.5,
+            "retrievals_per_question": 0.55,
+            "latency_proxy_ms": 592.7034269049993,
+            "upgrades_positive": 2,
+            "upgrades_zero": 6,
+            "upgrades_negative": 2,
+            "upgrade_f1_pp": 0.13680892750660195
+          }
+        }
+      },
+      "OOF_mse": 0.17073154260589354,
+      "OOF_benefit_auc": 0.661543098251959
+    }
+  },
+  "CPU": {
+    "structure": {
+      "mean_us": 18.721700000000002,
+      "p50_us": 17.7,
+      "p95_us": 25.604999999999997,
+      "max_us": 109.6,
+      "n": 1000
+    },
+    "router_both_heads": {
+      "mean_us": 42.477,
+      "p50_us": 40.8,
+      "p95_us": 49.605,
+      "max_us": 143.2,
+      "n": 1000
+    }
+  },
+  "OOF_selection_optimistic": true,
+  "full_in_sample": true,
+  "training_only_Cal200": true
+}

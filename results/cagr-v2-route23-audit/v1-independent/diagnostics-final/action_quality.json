@@ -1,0 +1,473 @@
+{
+  "hotpotqa": {
+    "direct": {
+      "n": 100,
+      "em": 0.11,
+      "f1": 0.15863882783882782,
+      "delta_F1_vs_H1": {
+        "n": 100,
+        "mean": -0.13457341585617447,
+        "sd": 0.373072657304373,
+        "min": -1.0,
+        "p25": -0.17094017094017094,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.24345711759504837,
+        "max": 1.0,
+        "ci95": [
+          -0.20944571596985392,
+          -0.06429430571344365
+        ],
+        "upper_one_sided95": -0.07439704812428954,
+        "seed": 42,
+        "repetitions": 10000,
+        "unit": "question",
+        "scope": "exploratory descriptive paired percentile bootstrap, not freeze acceptance"
+      },
+      "F1_signs_vs_H1": {
+        "positive": 8,
+        "tie": 64,
+        "negative": 28
+      },
+      "mean_latency_component_proxy_ms": 205.76243551000675
+    },
+    "stop": {
+      "n": 100,
+      "em": 0.18,
+      "f1": 0.2932122436950023,
+      "delta_F1_vs_H1": {
+        "n": 100,
+        "mean": 0.0,
+        "sd": 0.0,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "max": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "upper_one_sided95": 0.0,
+        "seed": 42,
+        "repetitions": 10000,
+        "unit": "question",
+        "scope": "exploratory descriptive paired percentile bootstrap, not freeze acceptance"
+      },
+      "F1_signs_vs_H1": {
+        "positive": 0,
+        "tie": 100,
+        "negative": 0
+      },
+      "mean_latency_component_proxy_ms": 770.2714459200029
+    },
+    "in_situ": {
+      "n": 100,
+      "em": 0.16,
+      "f1": 0.2683076829791601,
+      "delta_F1_vs_H1": {
+        "n": 100,
+        "mean": -0.024904560715842256,
+        "sd": 0.1760371926916071,
+        "min": -1.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "max": 0.6666666666666666,
+        "ci95": [
+          -0.06157242288842239,
+          0.006558091523302136
+        ],
+        "upper_one_sided95": 0.001695462144422975,
+        "seed": 42,
+        "repetitions": 10000,
+        "unit": "question",
+        "scope": "exploratory descriptive paired percentile bootstrap, not freeze acceptance"
+      },
+      "F1_signs_vs_H1": {
+        "positive": 4,
+        "tie": 90,
+        "negative": 6
+      },
+      "mean_latency_component_proxy_ms": 1346.0260841663683
+    },
+    "kv_bridge": {
+      "n": 100,
+      "em": 0.16,
+      "f1": 0.27461137323929313,
+      "delta_F1_vs_H1": {
+        "n": 100,
+        "mean": -0.01860087045570917,
+        "sd": 0.23652517387674038,
+        "min": -1.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.0003686635944700251,
+        "max": 1.0,
+        "ci95": [
+          -0.06651774193548386,
+          0.026566986687147957
+        ],
+        "upper_one_sided95": 0.019503097798259074,
+        "seed": 42,
+        "repetitions": 10000,
+        "unit": "question",
+        "scope": "exploratory descriptive paired percentile bootstrap, not freeze acceptance"
+      },
+      "F1_signs_vs_H1": {
+        "positive": 5,
+        "tie": 88,
+        "negative": 7
+      },
+      "mean_latency_component_proxy_ms": 1648.1011773799974
+    },
+    "rewrite": {
+      "n": 100,
+      "em": 0.21,
+      "f1": 0.32327381907053115,
+      "delta_F1_vs_H1": {
+        "n": 100,
+        "mean": 0.03006157537552886,
+        "sd": 0.3049147273097727,
+        "min": -1.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.6722222222222218,
+        "max": 1.0,
+        "ci95": [
+          -0.028478702402248916,
+          0.08943948412698408
+        ],
+        "upper_one_sided95": 0.07952259065224182,
+        "seed": 42,
+        "repetitions": 10000,
+        "unit": "question",
+        "scope": "exploratory descriptive paired percentile bootstrap, not freeze acceptance"
+      },
+      "F1_signs_vs_H1": {
+        "positive": 11,
+        "tie": 82,
+        "negative": 7
+      },
+      "mean_latency_component_proxy_ms": 2114.823384390009
+    }
+  },
+  "triviaqa": {
+    "direct": {
+      "n": 100,
+      "em": 0.45,
+      "f1": 0.4816123680241327,
+      "delta_F1_vs_H1": {
+        "n": 100,
+        "mean": 0.02677168852652724,
+        "sd": 0.44687450930628403,
+        "min": -1.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "ci95": [
+          -0.061667142857142865,
+          0.11402904761904763
+        ],
+        "upper_one_sided95": 0.09986787900271771,
+        "seed": 42,
+        "repetitions": 10000,
+        "unit": "question",
+        "scope": "exploratory descriptive paired percentile bootstrap, not freeze acceptance"
+      },
+      "F1_signs_vs_H1": {
+        "positive": 17,
+        "tie": 69,
+        "negative": 14
+      },
+      "mean_latency_component_proxy_ms": 182.15345715000058
+    },
+    "stop": {
+      "n": 100,
+      "em": 0.41,
+      "f1": 0.4548406794976054,
+      "delta_F1_vs_H1": {
+        "n": 100,
+        "mean": 0.0,
+        "sd": 0.0,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "max": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "upper_one_sided95": 0.0,
+        "seed": 42,
+        "repetitions": 10000,
+        "unit": "question",
+        "scope": "exploratory descriptive paired percentile bootstrap, not freeze acceptance"
+      },
+      "F1_signs_vs_H1": {
+        "positive": 0,
+        "tie": 100,
+        "negative": 0
+      },
+      "mean_latency_component_proxy_ms": 709.4883991599958
+    },
+    "in_situ": {
+      "n": 100,
+      "em": 0.41,
+      "f1": 0.4484313725490196,
+      "delta_F1_vs_H1": {
+        "n": 100,
+        "mean": -0.006409306948585885,
+        "sd": 0.15097644404259383,
+        "min": -1.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "max": 1.0,
+        "ci95": [
+          -0.036352380952380955,
+          0.023990693051414113
+        ],
+        "upper_one_sided95": 0.018743074003795063,
+        "seed": 42,
+        "repetitions": 10000,
+        "unit": "question",
+        "scope": "exploratory descriptive paired percentile bootstrap, not freeze acceptance"
+      },
+      "F1_signs_vs_H1": {
+        "positive": 1,
+        "tie": 94,
+        "negative": 5
+      },
+      "mean_latency_component_proxy_ms": 1265.297576878052
+    },
+    "kv_bridge": {
+      "n": 100,
+      "em": 0.42,
+      "f1": 0.45884803921568623,
+      "delta_F1_vs_H1": {
+        "n": 100,
+        "mean": 0.004007359718080781,
+        "sd": 0.23044751336207897,
+        "min": -1.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "max": 1.0,
+        "ci95": [
+          -0.04093571428571429,
+          0.04906428571428572
+        ],
+        "upper_one_sided95": 0.04001666666666667,
+        "seed": 42,
+        "repetitions": 10000,
+        "unit": "question",
+        "scope": "exploratory descriptive paired percentile bootstrap, not freeze acceptance"
+      },
+      "F1_signs_vs_H1": {
+        "positive": 4,
+        "tie": 91,
+        "negative": 5
+      },
+      "mean_latency_component_proxy_ms": 1606.7635758399892
+    },
+    "rewrite": {
+      "n": 100,
+      "em": 0.45,
+      "f1": 0.48090968219302327,
+      "delta_F1_vs_H1": {
+        "n": 100,
+        "mean": 0.026069002695417787,
+        "sd": 0.2368454373276437,
+        "min": -1.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.058698113207545845,
+        "max": 1.0,
+        "ci95": [
+          -0.017978616352201257,
+          0.0740504132973944
+        ],
+        "upper_one_sided95": 0.06571428571428571,
+        "seed": 42,
+        "repetitions": 10000,
+        "unit": "question",
+        "scope": "exploratory descriptive paired percentile bootstrap, not freeze acceptance"
+      },
+      "F1_signs_vs_H1": {
+        "positive": 6,
+        "tie": 90,
+        "negative": 4
+      },
+      "mean_latency_component_proxy_ms": 1965.069181520003
+    }
+  },
+  "overall": {
+    "direct": {
+      "n": 200,
+      "em": 0.28,
+      "f1": 0.32012559793148027,
+      "delta_F1_vs_H1": {
+        "n": 200,
+        "mean": -0.05390086366482361,
+        "sd": 0.41848455703155346,
+        "min": -1.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "ci95": [
+          -0.11091884492469586,
+          0.002996074769687111
+        ],
+        "upper_one_sided95": -0.006012605459057073,
+        "seed": 42,
+        "repetitions": 10000,
+        "unit": "question",
+        "scope": "exploratory descriptive paired percentile bootstrap, not freeze acceptance"
+      },
+      "F1_signs_vs_H1": {
+        "positive": 25,
+        "tie": 133,
+        "negative": 42
+      },
+      "mean_latency_component_proxy_ms": 193.9579463300037
+    },
+    "stop": {
+      "n": 200,
+      "em": 0.295,
+      "f1": 0.37402646159630387,
+      "delta_F1_vs_H1": {
+        "n": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "max": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "upper_one_sided95": 0.0,
+        "seed": 42,
+        "repetitions": 10000,
+        "unit": "question",
+        "scope": "exploratory descriptive paired percentile bootstrap, not freeze acceptance"
+      },
+      "F1_signs_vs_H1": {
+        "positive": 0,
+        "tie": 200,
+        "negative": 0
+      },
+      "mean_latency_component_proxy_ms": 739.8799225399994
+    },
+    "in_situ": {
+      "n": 200,
+      "em": 0.285,
+      "f1": 0.35836952776408987,
+      "delta_F1_vs_H1": {
+        "n": 200,
+        "mean": -0.01565693383221407,
+        "sd": 0.16383621444205831,
+        "min": -1.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "max": 1.0,
+        "ci95": [
+          -0.038711482901797996,
+          0.006250438054297879
+        ],
+        "upper_one_sided95": 0.0028825863678804665,
+        "seed": 42,
+        "repetitions": 10000,
+        "unit": "question",
+        "scope": "exploratory descriptive paired percentile bootstrap, not freeze acceptance"
+      },
+      "F1_signs_vs_H1": {
+        "positive": 5,
+        "tie": 184,
+        "negative": 11
+      },
+      "mean_latency_component_proxy_ms": 1305.66183052221
+    },
+    "kv_bridge": {
+      "n": 200,
+      "em": 0.29,
+      "f1": 0.3667297062274897,
+      "delta_F1_vs_H1": {
+        "n": 200,
+        "mean": -0.007296755368814194,
+        "sd": 0.23319420399403754,
+        "min": -1.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "max": 1.0,
+        "ci95": [
+          -0.03972612378015722,
+          0.025049476540616237
+        ],
+        "upper_one_sided95": 0.02018546655221226,
+        "seed": 42,
+        "repetitions": 10000,
+        "unit": "question",
+        "scope": "exploratory descriptive paired percentile bootstrap, not freeze acceptance"
+      },
+      "F1_signs_vs_H1": {
+        "positive": 9,
+        "tie": 179,
+        "negative": 12
+      },
+      "mean_latency_component_proxy_ms": 1627.4323766099933
+    },
+    "rewrite": {
+      "n": 200,
+      "em": 0.33,
+      "f1": 0.40209175063177727,
+      "delta_F1_vs_H1": {
+        "n": 200,
+        "mean": 0.028065289035473322,
+        "sd": 0.2723303814091168,
+        "min": -1.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.6666666666666666,
+        "max": 1.0,
+        "ci95": [
+          -0.008671092392932015,
+          0.06717386230974427
+        ],
+        "upper_one_sided95": 0.06075848382883266,
+        "seed": 42,
+        "repetitions": 10000,
+        "unit": "question",
+        "scope": "exploratory descriptive paired percentile bootstrap, not freeze acceptance"
+      },
+      "F1_signs_vs_H1": {
+        "positive": 17,
+        "tie": 172,
+        "negative": 11
+      },
+      "mean_latency_component_proxy_ms": 2039.946282955006
+    }
+  }
+}

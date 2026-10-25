@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software or its measurements, please cite this repository and the accompanying manuscript."
+title: "CAGR: Cost-Aware Gated Retrieval"
+type: software
+authors:
+  - family-names: Hao
+    given-names: Zida
+    affiliation: School of Software, Xinjiang University
+  - family-names: Li
+    given-names: Yubo
+    affiliation: School of Software, Xinjiang University
+version: 0.1.0-rc.3
+license: MIT
+repository-code: https://github.com/human-com-h/CAGR
+url: https://github.com/human-com-h/CAGR
+abstract: "Two frozen operating points for retrieval initiation and evidence-conditioned escalation, with original scientific source snapshots and question-level measurements."

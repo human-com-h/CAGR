@@ -1,0 +1,791 @@
+{
+  "candidate_id": "v04_pareto_candidate",
+  "candidate_only_not_frozen": false,
+  "selection_scope": "exploratory full-calibration parameter search on OOF gain predictions",
+  "lambda": 3e-05,
+  "utility_threshold": 0.0,
+  "first_retrieval_mode": "learned_utility",
+  "feature_schema": "logit_gap_mean_v1",
+  "stage0": {
+    "feature_schema": "logit_gap_mean_v1",
+    "gain": {
+      "mean": [
+        5.582228515625001,
+        0.21895415118086167,
+        15.52,
+        3.415
+      ],
+      "scale": [
+        2.7359215799516665,
+        0.171406753170686,
+        6.676046734408022,
+        2.2164780621517552
+      ],
+      "coefficients": [
+        0.053900863664823585,
+        -0.03178200335041159,
+        0.03195391681190011,
+        0.0015912097091459658,
+        0.03738284945756698
+      ],
+      "alpha": 100.0,
+      "feature_names": [
+        "mean_logit_gap",
+        "gap_uncertainty_of_mean",
+        "query_term_count",
+        "query_capitalized_count"
+      ]
+    },
+    "cost": {
+      "mean": [
+        5.582228515625001,
+        0.21895415118086167,
+        15.52,
+        3.415
+      ],
+      "scale": [
+        2.7359215799516665,
+        0.171406753170686,
+        6.676046734408022,
+        2.2164780621517552
+      ],
+      "coefficients": [
+        537.8398477249924,
+        -22.56302847598052,
+        23.088941138858882,
+        10.562244268222944,
+        -2.162900848567109
+      ],
+      "alpha": 100.0,
+      "feature_names": [
+        "mean_logit_gap",
+        "gap_uncertainty_of_mean",
+        "query_term_count",
+        "query_capitalized_count"
+      ]
+    }
+  },
+  "stage1": {
+    "feature_schema": "logit_gap_mean_v1",
+    "gain": {
+      "mean": [
+        8.910686197916668,
+        23.92826192780197,
+        5.13
+      ],
+      "scale": [
+        3.084264580595816,
+        50.494317693490544,
+        8.258516815990621
+      ],
+      "coefficients": [
+        0.02806528903547332,
+        -0.020064934179170688,
+        0.016598752632177527,
+        0.0010339539688110802
+      ],
+      "alpha": 100.0,
+      "feature_names": [
+        "mean_logit_gap",
+        "retrieval_score_variance",
+        "answer_length_tokens"
+      ]
+    },
+    "cost": {
+      "mean": [
+        8.910686197916668,
+        23.92826192780197,
+        5.13
+      ],
+      "scale": [
+        3.084264580595816,
+        50.494317693490544,
+        8.258516815990621
+      ],
+      "coefficients": [
+        1275.0931067850374,
+        -22.881271896972862,
+        -2.0181751823990113,
+        204.71842779869783
+      ],
+      "alpha": 10.0,
+      "feature_names": [
+        "mean_logit_gap",
+        "retrieval_score_variance",
+        "answer_length_tokens"
+      ]
+    }
+  },
+  "calibration_fold_heads": {
+    "0": {
+      "stage0": {
+        "feature_schema": "logit_gap_mean_v1",
+        "gain": {
+          "mean": [
+            5.706477864583334,
+            0.21210847586866022,
+            15.475,
+            3.4
+          ],
+          "scale": [
+            2.781235461022025,
+            0.1685053345362328,
+            6.899230029503293,
+            2.2533308678487494
+          ],
+          "coefficients": [
+            0.06548123831118823,
+            -0.03034143485106576,
+            0.02571612785227625,
+            -0.021490710019489632,
+            0.04117539193481501
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "gap_uncertainty_of_mean",
+            "query_term_count",
+            "query_capitalized_count"
+          ]
+        },
+        "cost": {
+          "mean": [
+            5.706477864583334,
+            0.21210847586866022,
+            15.475,
+            3.4
+          ],
+          "scale": [
+            2.781235461022025,
+            0.1685053345362328,
+            6.899230029503293,
+            2.2533308678487494
+          ],
+          "coefficients": [
+            530.0678074812523,
+            -17.304832585602554,
+            18.213449135850297,
+            7.960268199052904,
+            -11.087790391796306
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "gap_uncertainty_of_mean",
+            "query_term_count",
+            "query_capitalized_count"
+          ]
+        }
+      },
+      "stage1": {
+        "feature_schema": "logit_gap_mean_v1",
+        "gain": {
+          "mean": [
+            9.1775146484375,
+            23.741437403312645,
+            5.01875
+          ],
+          "scale": [
+            3.1074633856259304,
+            49.571242294511535,
+            8.125170671284392
+          ],
+          "coefficients": [
+            0.016247285897516263,
+            -0.02096505551875516,
+            0.0063054569859185595,
+            -0.0010090239835382699
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "retrieval_score_variance",
+            "answer_length_tokens"
+          ]
+        },
+        "cost": {
+          "mean": [
+            9.1775146484375,
+            23.741437403312645,
+            5.01875
+          ],
+          "scale": [
+            3.1074633856259304,
+            49.571242294511535,
+            8.125170671284392
+          ],
+          "coefficients": [
+            1264.480434412549,
+            -25.47917877116613,
+            -3.559987191959133,
+            244.02045694616808
+          ],
+          "alpha": 10.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "retrieval_score_variance",
+            "answer_length_tokens"
+          ]
+        }
+      }
+    },
+    "1": {
+      "stage0": {
+        "feature_schema": "logit_gap_mean_v1",
+        "gain": {
+          "mean": [
+            5.5979890950520845,
+            0.21752370639576904,
+            15.85625,
+            3.425
+          ],
+          "scale": [
+            2.7656853656297926,
+            0.16699002583172443,
+            6.8491303051920385,
+            2.169533359964764
+          ],
+          "coefficients": [
+            0.06804822954822952,
+            -0.03005687540190268,
+            0.03414748533670147,
+            -0.00328641894518843,
+            0.027829374350425977
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "gap_uncertainty_of_mean",
+            "query_term_count",
+            "query_capitalized_count"
+          ]
+        },
+        "cost": {
+          "mean": [
+            5.5979890950520845,
+            0.21752370639576904,
+            15.85625,
+            3.425
+          ],
+          "scale": [
+            2.7656853656297926,
+            0.16699002583172443,
+            6.8491303051920385,
+            2.169533359964764
+          ],
+          "coefficients": [
+            526.7100578624803,
+            -17.621371390738133,
+            4.681397382902418,
+            19.166985505357726,
+            -5.909666110399655
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "gap_uncertainty_of_mean",
+            "query_term_count",
+            "query_capitalized_count"
+          ]
+        }
+      },
+      "stage1": {
+        "feature_schema": "logit_gap_mean_v1",
+        "gain": {
+          "mean": [
+            8.787850748697917,
+            22.845064806530136,
+            4.85625
+          ],
+          "scale": [
+            3.0080345713093686,
+            45.828686523181595,
+            7.9024101347310545
+          ],
+          "coefficients": [
+            0.02570661129434166,
+            -0.01798077649671484,
+            0.024093225498142724,
+            0.002564740451296693
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "retrieval_score_variance",
+            "answer_length_tokens"
+          ]
+        },
+        "cost": {
+          "mean": [
+            8.787850748697917,
+            22.845064806530136,
+            4.85625
+          ],
+          "scale": [
+            3.0080345713093686,
+            45.828686523181595,
+            7.9024101347310545
+          ],
+          "coefficients": [
+            1298.6343983625359,
+            -28.875383188863506,
+            -1.3585725445560877,
+            193.82691900594577
+          ],
+          "alpha": 10.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "retrieval_score_variance",
+            "answer_length_tokens"
+          ]
+        }
+      }
+    },
+    "2": {
+      "stage0": {
+        "feature_schema": "logit_gap_mean_v1",
+        "gain": {
+          "mean": [
+            5.578892415364586,
+            0.21818957409480552,
+            15.0,
+            3.3
+          ],
+          "scale": [
+            2.629059671948249,
+            0.17598309609572327,
+            5.811626278418116,
+            2.102974084481309
+          ],
+          "coefficients": [
+            0.048968112548062485,
+            -0.02615042344506922,
+            0.02233436916692176,
+            0.02847451504071906,
+            0.03770101368546173
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "gap_uncertainty_of_mean",
+            "query_term_count",
+            "query_capitalized_count"
+          ]
+        },
+        "cost": {
+          "mean": [
+            5.578892415364586,
+            0.21818957409480552,
+            15.0,
+            3.3
+          ],
+          "scale": [
+            2.629059671948249,
+            0.17598309609572327,
+            5.811626278418116,
+            2.102974084481309
+          ],
+          "coefficients": [
+            541.414422937488,
+            -23.30646747964972,
+            18.368595233947335,
+            -0.6349227204743145,
+            6.441746514417853
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "gap_uncertainty_of_mean",
+            "query_term_count",
+            "query_capitalized_count"
+          ]
+        }
+      },
+      "stage1": {
+        "feature_schema": "logit_gap_mean_v1",
+        "gain": {
+          "mean": [
+            9.016475423177084,
+            22.45056349661447,
+            5.56875
+          ],
+          "scale": [
+            3.0175111958724132,
+            47.66237307421317,
+            9.06202369437975
+          ],
+          "coefficients": [
+            0.027210785414794842,
+            -0.013503575113179183,
+            0.018348368145805594,
+            0.0027066359054996143
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "retrieval_score_variance",
+            "answer_length_tokens"
+          ]
+        },
+        "cost": {
+          "mean": [
+            9.016475423177084,
+            22.45056349661447,
+            5.56875
+          ],
+          "scale": [
+            3.0175111958724132,
+            47.66237307421317,
+            9.06202369437975
+          ],
+          "coefficients": [
+            1273.588734156279,
+            -3.0701639775758083,
+            1.4986116873681863,
+            212.56231271594172
+          ],
+          "alpha": 10.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "retrieval_score_variance",
+            "answer_length_tokens"
+          ]
+        }
+      }
+    },
+    "3": {
+      "stage0": {
+        "feature_schema": "logit_gap_mean_v1",
+        "gain": {
+          "mean": [
+            5.580319010416668,
+            0.22136187703133606,
+            15.525,
+            3.50625
+          ],
+          "scale": [
+            2.7986078606455442,
+            0.1736334753932654,
+            6.573573989847533,
+            2.2555400545102273
+          ],
+          "coefficients": [
+            0.06499512720007712,
+            -0.03423354337597877,
+            0.04626344677742397,
+            0.004446346781236491,
+            0.0372582648344032
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "gap_uncertainty_of_mean",
+            "query_term_count",
+            "query_capitalized_count"
+          ]
+        },
+        "cost": {
+          "mean": [
+            5.580319010416668,
+            0.22136187703133606,
+            15.525,
+            3.50625
+          ],
+          "scale": [
+            2.7986078606455442,
+            0.1736334753932654,
+            6.573573989847533,
+            2.2555400545102273
+          ],
+          "coefficients": [
+            538.3841451624988,
+            -20.080786236407217,
+            38.04558561772428,
+            10.942541567399054,
+            -5.1913239328094924
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "gap_uncertainty_of_mean",
+            "query_term_count",
+            "query_capitalized_count"
+          ]
+        }
+      },
+      "stage1": {
+        "feature_schema": "logit_gap_mean_v1",
+        "gain": {
+          "mean": [
+            8.845745442708335,
+            26.65427805658104,
+            4.975
+          ],
+          "scale": [
+            3.1805933517177807,
+            55.46060896847389,
+            8.249204507102485
+          ],
+          "coefficients": [
+            0.02942684938957974,
+            -0.02231001366599055,
+            0.012822384493737942,
+            -3.0163456902872425e-05
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "retrieval_score_variance",
+            "answer_length_tokens"
+          ]
+        },
+        "cost": {
+          "mean": [
+            8.845745442708335,
+            26.65427805658104,
+            4.975
+          ],
+          "scale": [
+            3.1805933517177807,
+            55.46060896847389,
+            8.249204507102485
+          ],
+          "coefficients": [
+            1271.1819961500369,
+            -22.221407609724153,
+            -4.289532826693959,
+            201.2907397025975
+          ],
+          "alpha": 10.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "retrieval_score_variance",
+            "answer_length_tokens"
+          ]
+        }
+      }
+    },
+    "4": {
+      "stage0": {
+        "feature_schema": "logit_gap_mean_v1",
+        "gain": {
+          "mean": [
+            5.447464192708336,
+            0.22558712251373744,
+            15.74375,
+            3.44375
+          ],
+          "scale": [
+            2.69518552524729,
+            0.1714751798546852,
+            7.135515814396323,
+            2.2905972883726204
+          ],
+          "coefficients": [
+            0.02201161071656061,
+            -0.030475425095246835,
+            0.022191642656650884,
+            0.011809377728011845,
+            0.025200640443267298
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "gap_uncertainty_of_mean",
+            "query_term_count",
+            "query_capitalized_count"
+          ]
+        },
+        "cost": {
+          "mean": [
+            5.447464192708336,
+            0.22558712251373744,
+            15.74375,
+            3.44375
+          ],
+          "scale": [
+            2.69518552524729,
+            0.1714751798546852,
+            7.135515814396323,
+            2.2905972883726204
+          ],
+          "coefficients": [
+            552.6228051812417,
+            -29.85067887328463,
+            29.065894485711,
+            11.316539952535157,
+            7.457876018239222
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "gap_uncertainty_of_mean",
+            "query_term_count",
+            "query_capitalized_count"
+          ]
+        }
+      },
+      "stage1": {
+        "feature_schema": "logit_gap_mean_v1",
+        "gain": {
+          "mean": [
+            8.725844726562501,
+            23.949965875971525,
+            5.23125
+          ],
+          "scale": [
+            3.08243904289961,
+            53.220293350556986,
+            7.878151651085423
+          ],
+          "coefficients": [
+            0.041734913181134106,
+            -0.015948310030884875,
+            0.01592986557251236,
+            0.0009320086343749509
+          ],
+          "alpha": 100.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "retrieval_score_variance",
+            "answer_length_tokens"
+          ]
+        },
+        "cost": {
+          "mean": [
+            8.725844726562501,
+            23.949965875971525,
+            5.23125
+          ],
+          "scale": [
+            3.08243904289961,
+            53.220293350556986,
+            7.878151651085423
+          ],
+          "coefficients": [
+            1267.5799708437876,
+            -34.78007093736822,
+            -2.6651459691223476,
+            160.5016789611941
+          ],
+          "alpha": 10.0,
+          "feature_names": [
+            "mean_logit_gap",
+            "retrieval_score_variance",
+            "answer_length_tokens"
+          ]
+        }
+      }
+    }
+  },
+  "text_feature_limits": {
+    "max_documents": 5,
+    "max_document_chars": 1024,
+    "max_document_terms": 64,
+    "max_question_chars": 1024,
+    "max_question_terms": 64,
+    "max_answer_chars": 512,
+    "max_answer_terms": 64
+  },
+  "uses_text_features": false,
+  "OOF_exploratory_replay": {
+    "variant": "gap_base",
+    "lambda0": 0.0,
+    "lambda1": 0.0002,
+    "threshold0": 0.06643697151231595,
+    "threshold1": -0.20252241348899253,
+    "constraint": "point_floor",
+    "tier_counts": [
+      118,
+      63,
+      19
+    ],
+    "proxy_ms": 546.701429569976,
+    "by_dataset": {
+      "hotpotqa": {
+        "em": 0.18,
+        "f1": 0.2840376405203991,
+        "tier_counts": [
+          49,
+          38,
+          13
+        ],
+        "em_minus_rag": 0.0,
+        "f1_minus_rag": -0.009174603174603176
+      },
+      "triviaqa": {
+        "em": 0.45,
+        "f1": 0.48179551820728295,
+        "tier_counts": [
+          69,
+          25,
+          6
+        ],
+        "em_minus_rag": 0.04,
+        "f1_minus_rag": 0.026954838709677423
+      }
+    }
+  },
+  "old_router_sha256": "2114a1b6b5d34988a8cc785efc4f2b15b9778208dc15fb2b0735a8e09033b517",
+  "ready_for_held_out_test": false,
+  "GPU_validated": false,
+  "routing": {
+    "lambda0": 0.0,
+    "lambda1": 0.0002,
+    "threshold0": 0.06643697151231595,
+    "threshold1": -0.20252241348899253
+  },
+  "upgrade_mode": "evidence_gap",
+  "sparse_upgrade_target": [
+    0.075,
+    0.15
+  ],
+  "cost_scenario": {
+    "retrieval_ms_per_call": 131.0,
+    "routing_allowance_ms_per_question": 0.5,
+    "GPU_measured": false,
+    "actual_component_sensitivity_also_reported": true
+  },
+  "online_development_parameters_frozen": true,
+  "actual_component_proxy_sensitivity": {
+    "tier_counts": [
+      118,
+      63,
+      19
+    ],
+    "proxy_ms": 562.1750035299765,
+    "by_dataset": {
+      "hotpotqa": {
+        "em": 0.18,
+        "f1": 0.2840376405203991,
+        "tier_counts": [
+          49,
+          38,
+          13
+        ],
+        "em_minus_rag": 0.0,
+        "f1_minus_rag": -0.009174603174603176
+      },
+      "triviaqa": {
+        "em": 0.45,
+        "f1": 0.48179551820728295,
+        "tier_counts": [
+          69,
+          25,
+          6
+        ],
+        "em_minus_rag": 0.04,
+        "f1_minus_rag": 0.026954838709677423
+      }
+    }
+  },
+  "primary_online_method": "cagr",
+  "paired_experimental_method": "cagr_in_situ",
+  "expansion_variant": "question_answer",
+  "statistical_acceptance": {
+    "quality": "per-dataset EM/F1 sample means >= Always-RAG minus .01",
+    "CIs": "quality recovery/cost superiority/overhead; not a CI noninferiority hard gate"
+  },
+  "test_execution_allowed": false,
+  "methodology_paper": true
+}

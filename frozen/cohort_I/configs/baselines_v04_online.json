@@ -1,0 +1,325 @@
+{
+  "status": "frozen_for_online_development_validation",
+  "seed": 42,
+  "targ_style": {
+    "threshold": 0.322316956977953,
+    "training_n": 200,
+    "training_metrics": {
+      "tier_counts": [
+        94,
+        106,
+        0
+      ],
+      "proxy_ms": 490.6711407699862,
+      "by_dataset": {
+        "hotpotqa": {
+          "em": 0.18,
+          "f1": 0.28364081512357375,
+          "tier_counts": [
+            40,
+            60,
+            0
+          ],
+          "em_minus_rag": 0.0,
+          "f1_minus_rag": -0.00957142857142857
+        },
+        "triviaqa": {
+          "em": 0.46,
+          "f1": 0.49419551820728286,
+          "tier_counts": [
+            54,
+            46,
+            0
+          ],
+          "em_minus_rag": 0.05,
+          "f1_minus_rag": 0.03935483870967742
+        }
+      }
+    },
+    "calibration_fold_parameters": {
+      "0": {
+        "threshold": 0.2668118861415759,
+        "training_n": 160,
+        "training_metrics": {
+          "tier_counts": [
+            68,
+            92,
+            0
+          ],
+          "proxy_ms": 504.8304436374945,
+          "by_dataset": {
+            "hotpotqa": {
+              "em": 0.1875,
+              "f1": 0.2910589554124036,
+              "tier_counts": [
+                30,
+                50,
+                0
+              ],
+              "em_minus_rag": 0.0,
+              "f1_minus_rag": -0.005416666666666665
+            },
+            "triviaqa": {
+              "em": 0.4625,
+              "f1": 0.49691106442577027,
+              "tier_counts": [
+                38,
+                42,
+                0
+              ],
+              "em_minus_rag": 0.025,
+              "f1_minus_rag": 0.026276881720430106
+            }
+          }
+        }
+      },
+      "1": {
+        "threshold": 0.16921795185333943,
+        "training_n": 160,
+        "training_metrics": {
+          "tier_counts": [
+            40,
+            120,
+            0
+          ],
+          "proxy_ms": 593.8407707687322,
+          "by_dataset": {
+            "hotpotqa": {
+              "em": 0.1625,
+              "f1": 0.28273656898656896,
+              "tier_counts": [
+                17,
+                63,
+                0
+              ],
+              "em_minus_rag": 0.0,
+              "f1_minus_rag": 0.0
+            },
+            "triviaqa": {
+              "em": 0.45,
+              "f1": 0.4927443977591036,
+              "tier_counts": [
+                23,
+                57,
+                0
+              ],
+              "em_minus_rag": 0.0625,
+              "f1_minus_rag": 0.05
+            }
+          }
+        }
+      },
+      "2": {
+        "threshold": 0.322316956977953,
+        "training_n": 160,
+        "training_metrics": {
+          "tier_counts": [
+            76,
+            84,
+            0
+          ],
+          "proxy_ms": 503.02224319373437,
+          "by_dataset": {
+            "hotpotqa": {
+              "em": 0.2,
+              "f1": 0.3021517515051998,
+              "tier_counts": [
+                30,
+                50,
+                0
+              ],
+              "em_minus_rag": 0.0,
+              "f1_minus_rag": -0.0036309523809523792
+            },
+            "triviaqa": {
+              "em": 0.4625,
+              "f1": 0.5037738095238095,
+              "tier_counts": [
+                46,
+                34,
+                0
+              ],
+              "em_minus_rag": 0.05,
+              "f1_minus_rag": 0.03669354838709678
+            }
+          }
+        }
+      },
+      "3": {
+        "threshold": 0.23150845564491168,
+        "training_n": 160,
+        "training_metrics": {
+          "tier_counts": [
+            55,
+            105,
+            0
+          ],
+          "proxy_ms": 541.5298795562263,
+          "by_dataset": {
+            "hotpotqa": {
+              "em": 0.1625,
+              "f1": 0.28669387604732427,
+              "tier_counts": [
+                23,
+                57,
+                0
+              ],
+              "em_minus_rag": 0.0,
+              "f1_minus_rag": -0.0075
+            },
+            "triviaqa": {
+              "em": 0.475,
+              "f1": 0.5144705882352941,
+              "tier_counts": [
+                32,
+                48,
+                0
+              ],
+              "em_minus_rag": 0.0625,
+              "f1_minus_rag": 0.0575268817204301
+            }
+          }
+        }
+      },
+      "4": {
+        "threshold": 0.3945550528392019,
+        "training_n": 160,
+        "training_metrics": {
+          "tier_counts": [
+            89,
+            71,
+            0
+          ],
+          "proxy_ms": 452.11837543747407,
+          "by_dataset": {
+            "hotpotqa": {
+              "em": 0.1875,
+              "f1": 0.27717800303145135,
+              "tier_counts": [
+                41,
+                39,
+                0
+              ],
+              "em_minus_rag": 0.0,
+              "f1_minus_rag": -0.009694444444444445
+            },
+            "triviaqa": {
+              "em": 0.4625,
+              "f1": 0.5005777310924369,
+              "tier_counts": [
+                48,
+                32,
+                0
+              ],
+              "em_minus_rag": 0.0625,
+              "f1_minus_rag": 0.0637768817204301
+            }
+          }
+        }
+      }
+    },
+    "pilot_k": 5,
+    "beta": 3.0,
+    "paper_pilot_k": 20,
+    "label": "same-backbone budget adaptation"
+  },
+  "sugar_l_style_budgeted": {
+    "low_threshold": 0.0,
+    "high_threshold": 0.34657359027997264,
+    "training_n": 200,
+    "training_mean_delta01_f1": 0.05390086366482361,
+    "training_mean_delta12_f1": 0.028065289035473322,
+    "rule": "quality-first lambda=0; agreement direct if initial retrieval gain positive, disagreement may upgrade if marginal upgrade gain positive",
+    "semantic_support": [
+      0.0,
+      0.6931471805599453
+    ],
+    "empirical_semantic_scores_available": false,
+    "calibration_kind": "training-fold marginal-gain prior + exact entropy support; empirical semantic calibration requires GPU",
+    "calibration_fold_parameters": {
+      "0": {
+        "low_threshold": 0.0,
+        "high_threshold": 0.34657359027997264,
+        "training_n": 160,
+        "training_mean_delta01_f1": 0.06548123831118827,
+        "training_mean_delta12_f1": 0.016247285897516263,
+        "rule": "quality-first lambda=0; agreement direct if initial retrieval gain positive, disagreement may upgrade if marginal upgrade gain positive",
+        "semantic_support": [
+          0.0,
+          0.6931471805599453
+        ],
+        "empirical_semantic_scores_available": false,
+        "calibration_kind": "training-fold marginal-gain prior + exact entropy support; empirical semantic calibration requires GPU"
+      },
+      "1": {
+        "low_threshold": 0.0,
+        "high_threshold": 0.34657359027997264,
+        "training_n": 160,
+        "training_mean_delta01_f1": 0.06804822954822955,
+        "training_mean_delta12_f1": 0.025706611294341652,
+        "rule": "quality-first lambda=0; agreement direct if initial retrieval gain positive, disagreement may upgrade if marginal upgrade gain positive",
+        "semantic_support": [
+          0.0,
+          0.6931471805599453
+        ],
+        "empirical_semantic_scores_available": false,
+        "calibration_kind": "training-fold marginal-gain prior + exact entropy support; empirical semantic calibration requires GPU"
+      },
+      "2": {
+        "low_threshold": 0.0,
+        "high_threshold": 0.34657359027997264,
+        "training_n": 160,
+        "training_mean_delta01_f1": 0.04896811254806249,
+        "training_mean_delta12_f1": 0.027210785414794846,
+        "rule": "quality-first lambda=0; agreement direct if initial retrieval gain positive, disagreement may upgrade if marginal upgrade gain positive",
+        "semantic_support": [
+          0.0,
+          0.6931471805599453
+        ],
+        "empirical_semantic_scores_available": false,
+        "calibration_kind": "training-fold marginal-gain prior + exact entropy support; empirical semantic calibration requires GPU"
+      },
+      "3": {
+        "low_threshold": 0.0,
+        "high_threshold": 0.34657359027997264,
+        "training_n": 160,
+        "training_mean_delta01_f1": 0.06499512720007715,
+        "training_mean_delta12_f1": 0.029426849389579752,
+        "rule": "quality-first lambda=0; agreement direct if initial retrieval gain positive, disagreement may upgrade if marginal upgrade gain positive",
+        "semantic_support": [
+          0.0,
+          0.6931471805599453
+        ],
+        "empirical_semantic_scores_available": false,
+        "calibration_kind": "training-fold marginal-gain prior + exact entropy support; empirical semantic calibration requires GPU"
+      },
+      "4": {
+        "low_threshold": 0.0,
+        "high_threshold": 0.34657359027997264,
+        "training_n": 160,
+        "training_mean_delta01_f1": 0.02201161071656066,
+        "training_mean_delta12_f1": 0.041734913181134106,
+        "rule": "quality-first lambda=0; agreement direct if initial retrieval gain positive, disagreement may upgrade if marginal upgrade gain positive",
+        "semantic_support": [
+          0.0,
+          0.6931471805599453
+        ],
+        "empirical_semantic_scores_available": false,
+        "calibration_kind": "training-fold marginal-gain prior + exact entropy support; empirical semantic calibration requires GPU"
+      }
+    },
+    "samples": 2,
+    "sample_max_tokens": 8,
+    "sampling_temperature": 1.0,
+    "entailment_backend": "same_backbone_bidirectional_judge",
+    "entailment_max_tokens": 4,
+    "max_retrieval_rounds": 2,
+    "semantic_entropy": "unweighted_mean_negative_log_empirical_cluster_mass",
+    "feedback_after_each_retrieval": true,
+    "label": "same-backbone budget adaptation; no semantic-score data invented"
+  },
+  "test_read": false,
+  "GPU_measured": false,
+  "fitting_wall_ms": 225.07009999981165,
+  "script_sha256": "b9b63327aa3599f4610ef3e87771dcec0355bb73e82b72a07313b98e490506c9"
+}

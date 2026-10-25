@@ -1,0 +1,81 @@
+{
+  "repo_id": "Qwen/Qwen2.5-3B-Instruct",
+  "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "metadata_url": "https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct/tree/aa8e72537993ba99e69dfaafa59ed015b17504d1?recursive=true&expand=false",
+  "files": {
+    ".gitattributes": {
+      "bytes": 1519,
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "git_blob_oid": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+      "hash_source": "sha256_of_git_blob_verified_bytes"
+    },
+    "LICENSE": {
+      "bytes": 7388,
+      "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+      "git_blob_oid": "ed317377ac0abff39f17eec693ce664f4b8152af",
+      "hash_source": "sha256_of_git_blob_verified_bytes"
+    },
+    "README.md": {
+      "bytes": 4930,
+      "sha256": "2c74693e6ae36ba878124d465195b4dad0f71035b54ece1c9fd1553cc497ef8c",
+      "git_blob_oid": "0b87f6362ee8ad33b2223afb47134264380f13fe",
+      "hash_source": "sha256_of_git_blob_verified_bytes"
+    },
+    "config.json": {
+      "bytes": 661,
+      "sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+      "git_blob_oid": "51b83fbd4e2d363b60235b9c8d494046a83c1cbf",
+      "hash_source": "sha256_of_git_blob_verified_bytes"
+    },
+    "generation_config.json": {
+      "bytes": 242,
+      "sha256": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+      "git_blob_oid": "bf077f03dc569cfb8a90b3ec1ad20365a620bad6",
+      "hash_source": "sha256_of_git_blob_verified_bytes"
+    },
+    "merges.txt": {
+      "bytes": 1671839,
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "git_blob_oid": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+      "hash_source": "sha256_of_git_blob_verified_bytes"
+    },
+    "model-00001-of-00002.safetensors": {
+      "bytes": 3968658944,
+      "sha256": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+      "git_blob_oid": "023b91070b9cfb1f9ab22fe215519bd786db6906",
+      "hash_source": "official_lfs_sha256"
+    },
+    "model-00002-of-00002.safetensors": {
+      "bytes": 2203268048,
+      "sha256": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d",
+      "git_blob_oid": "02754809bbcaf9c3f1a667c1ca0c3b153d6d72ac",
+      "hash_source": "official_lfs_sha256"
+    },
+    "model.safetensors.index.json": {
+      "bytes": 35581,
+      "sha256": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56",
+      "git_blob_oid": "38047c6284a25427043f0ab040f623a2a20dd093",
+      "hash_source": "sha256_of_git_blob_verified_bytes"
+    },
+    "tokenizer.json": {
+      "bytes": 7031645,
+      "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "git_blob_oid": "443909a61d429dff23010e5bddd28ff530edda00",
+      "hash_source": "sha256_of_git_blob_verified_bytes"
+    },
+    "tokenizer_config.json": {
+      "bytes": 7305,
+      "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+      "git_blob_oid": "07bfe0640cb5a0037f9322287fbfc682806cf672",
+      "hash_source": "sha256_of_git_blob_verified_bytes"
+    },
+    "vocab.json": {
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "git_blob_oid": "4783fe10ac3adce15ac8f358ef5462739852c569",
+      "hash_source": "sha256_of_git_blob_verified_bytes"
+    }
+  },
+  "total_bytes": 6183464935,
+  "weights_downloaded_for_this_audit": false
+}

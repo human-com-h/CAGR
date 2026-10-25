@@ -1,0 +1,5 @@
+First-stage rule,H/T searches,H F1 (%),H delta (pp),T F1 (%),All F1 (%),All delta (pp)
+Original gate,265/145,30.6456,+0.0000,43.0591,36.8523,+0.0000
+Score: 555 total,320/235,31.2000,+0.5544,44.5913,37.8957,+1.0433
+Score: dataset quotas,314/241,31.5467,+0.9011,44.7247,38.1357,+1.2833
+TARG-style selections,314/241,32.0205,+1.3750,44.4038,38.2122,+1.3598

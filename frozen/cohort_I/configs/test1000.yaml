@@ -1,0 +1,36 @@
+protocol: held-out-test1000-two-shards
+seed: 42
+methods:
+- direct
+- always_rag
+- always_multihop
+- binary_gate
+- targ_style
+- sugar_l_style_budgeted
+- cagr
+- cagr_in_situ
+common_budget:
+  max_input_tokens_per_call: 4096
+  max_answer_tokens: 64
+  max_rewrite_tokens: 48
+  max_retrieval_calls: 2
+  max_total_output_tokens: 181
+  max_total_input_tokens: 16384
+  reserve_final_answer_tokens: 64
+runtime:
+  torch_required: 2.11.0+cu128
+  cuda_required: '12.8'
+  python_major_minor: '3.13'
+  gpu_count: 2
+  gpu_name_contains: T4
+  device: cuda:0
+  batch: 1
+  concurrency: 1
+  wall_budget_seconds: 43200
+signal_variant: B
+deployment: all_200_development
+shards: 2
+questions_per_shard: 500
+pairs_per_question: 2
+operating_guard_seconds: 42000
+bootstrap_replicates: 20000

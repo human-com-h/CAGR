@@ -1,0 +1,5 @@
+Measure,Query rewriting,KV-Bridge
+Mean call time (ms),724.521,267.980
+P95 call time (ms),1093.41,315.39
+Mean new input tokens,669.420,19.005
+Mean output tokens,13.235,6.855

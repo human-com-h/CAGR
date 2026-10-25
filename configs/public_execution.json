@@ -1,0 +1,8 @@
+{
+  "scope": "explicit_public_command_only",
+  "seed": 42,
+  "runtime_downloads": false,
+  "cloud_submission": false,
+  "automatic_retries": 0,
+  "frozen_parameters_only": true
+}

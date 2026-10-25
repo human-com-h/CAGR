@@ -1,0 +1,34 @@
+{
+  "source": "prior failed development timing residual variance only, no new labels/head/threshold fitting",
+  "precision_by_dataset": {
+    "hotpotqa": {
+      "pooled_within_question_sd": 0.02701091135986634,
+      "target_one_sided_halfwidth": 0.0015,
+      "questions": 10,
+      "normal_approx_required_pairs": 87.74608770901146,
+      "scope": "variance-only prospective precision planning, NOT proof of power/pass or GPU result"
+    },
+    "triviaqa": {
+      "pooled_within_question_sd": 0.03024721893213682,
+      "target_one_sided_halfwidth": 0.0015,
+      "questions": 10,
+      "normal_approx_required_pairs": 110.03229872543835,
+      "scope": "variance-only prospective precision planning, NOT proof of power/pass or GPU result"
+    }
+  },
+  "fixed_smoke_triplets_per_question": 120,
+  "balanced_C_on_off_orders": 6,
+  "cycles": 20,
+  "calibration_pairs_per_question": 12,
+  "ABC_measured_calls": 720,
+  "ABC_predesignated_paid_warmup_calls": 36,
+  "target_halfwidth_is_planning_not_acceptance": true,
+  "no_optional_stopping": true,
+  "rough_paid_wall_estimate_seconds": 8481.262097807055,
+  "remote_wall_budget_seconds": 10800,
+  "budget_caveat": "rough archive-based estimate; actual deadline enforced before each run, no extra time granted",
+  "unchanged_upper_ratio": 0.005,
+  "bootstrap_replicates": 20000,
+  "seed": 42,
+  "sampling_unit": "question"
+}

@@ -1,0 +1,27 @@
+{
+  "scope": "pilot_train_context_corpus_not_fullwiki",
+  "repo_id": "hotpotqa/hotpot_qa",
+  "revision": "1908d6afbbead072334abe2965f91bd2709910ab",
+  "source_split": "train",
+  "source_fields_read": [
+    "context"
+  ],
+  "source_files": [
+    {
+      "file": "distractor/train-00000-of-00002.parquet",
+      "sha256": "76d3bb3048a7cc73c1958107c0c5872a00d7e7d00c105b81e92f6769e7822e68"
+    },
+    {
+      "file": "distractor/train-00001-of-00002.parquet",
+      "sha256": "713661628434fbb19fff7392e2e321e4ed107e3c7c7784d0690946e5f722763f"
+    }
+  ],
+  "source_rows": 90447,
+  "documents": 483690,
+  "ordered_document_ids_sha256": "859b543f5d9ef4c9dd14bc422d43aa26ed14317be1359147fe92ac6bcc47a957",
+  "sqlite_sha256": "751e231c0949073ce63995f1c158e89dd1351619163765f011b4d7b80718a22a",
+  "sqlite_version": "3.45.3",
+  "build_seconds": 44.50229279999985,
+  "test_or_calibration_used_for_index": false,
+  "corpus_license": "CC-BY-SA-4.0"
+}

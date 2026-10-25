@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.csv text eol=lf
+*.svg text eol=lf
+frozen/** -text
+evidence/** -text
+provenance/original_build_pilot_corpus.py -text

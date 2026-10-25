@@ -1,0 +1,72 @@
+{
+  "development": {
+    "cagr": {
+      "stopped_questions": 3,
+      "final_generations_actually_saved": 3,
+      "known_H1_output_tokens_for_identical_prompt_replay": 6,
+      "sum_H1_generation_ms_component_proxy_for_omitted_call": 981.9229880013154,
+      "off_stop_new_GPU_generation_performed": false,
+      "same_ordered_initial_context_and_question_proven_by_runtime": true,
+      "quality_if_forcing_same_prompt_regeneration": "same known greedy H1 potential answer conditional on frozen deterministic generation; NOT a newly measured arm",
+      "real_omitted_call_wall_and_control_cost_ms": null,
+      "extra_retrieval_or_rewrite_savings_from_stop": 0
+    },
+    "cagr_in_situ": {
+      "stopped_questions": 5,
+      "final_generations_actually_saved": 5,
+      "known_H1_output_tokens_for_identical_prompt_replay": 15,
+      "sum_H1_generation_ms_component_proxy_for_omitted_call": 1823.0373069973211,
+      "off_stop_new_GPU_generation_performed": false,
+      "same_ordered_initial_context_and_question_proven_by_runtime": true,
+      "quality_if_forcing_same_prompt_regeneration": "same known greedy H1 potential answer conditional on frozen deterministic generation; NOT a newly measured arm",
+      "real_omitted_call_wall_and_control_cost_ms": null,
+      "extra_retrieval_or_rewrite_savings_from_stop": 0
+    },
+    "always_multihop": {
+      "stopped_questions": 30,
+      "final_generations_actually_saved": 30,
+      "known_H1_output_tokens_for_identical_prompt_replay": 153,
+      "sum_H1_generation_ms_component_proxy_for_omitted_call": 13168.067095998595,
+      "off_stop_new_GPU_generation_performed": false,
+      "same_ordered_initial_context_and_question_proven_by_runtime": true,
+      "quality_if_forcing_same_prompt_regeneration": "same known greedy H1 potential answer conditional on frozen deterministic generation; NOT a newly measured arm",
+      "real_omitted_call_wall_and_control_cost_ms": null,
+      "extra_retrieval_or_rewrite_savings_from_stop": 0
+    }
+  },
+  "test": {
+    "cagr": {
+      "stopped_questions": 11,
+      "final_generations_actually_saved": 11,
+      "known_H1_output_tokens_for_identical_prompt_replay": 37,
+      "sum_H1_generation_ms_component_proxy_for_omitted_call": 3621.6130480008815,
+      "off_stop_new_GPU_generation_performed": false,
+      "same_ordered_initial_context_and_question_proven_by_runtime": true,
+      "quality_if_forcing_same_prompt_regeneration": "same known greedy H1 potential answer conditional on frozen deterministic generation; NOT a newly measured arm",
+      "real_omitted_call_wall_and_control_cost_ms": null,
+      "extra_retrieval_or_rewrite_savings_from_stop": 0
+    },
+    "cagr_in_situ": {
+      "stopped_questions": 38,
+      "final_generations_actually_saved": 38,
+      "known_H1_output_tokens_for_identical_prompt_replay": 120,
+      "sum_H1_generation_ms_component_proxy_for_omitted_call": 12603.07975099704,
+      "off_stop_new_GPU_generation_performed": false,
+      "same_ordered_initial_context_and_question_proven_by_runtime": true,
+      "quality_if_forcing_same_prompt_regeneration": "same known greedy H1 potential answer conditional on frozen deterministic generation; NOT a newly measured arm",
+      "real_omitted_call_wall_and_control_cost_ms": null,
+      "extra_retrieval_or_rewrite_savings_from_stop": 0
+    },
+    "always_multihop": {
+      "stopped_questions": 138,
+      "final_generations_actually_saved": 138,
+      "known_H1_output_tokens_for_identical_prompt_replay": 1123,
+      "sum_H1_generation_ms_component_proxy_for_omitted_call": 72009.46934300299,
+      "off_stop_new_GPU_generation_performed": false,
+      "same_ordered_initial_context_and_question_proven_by_runtime": true,
+      "quality_if_forcing_same_prompt_regeneration": "same known greedy H1 potential answer conditional on frozen deterministic generation; NOT a newly measured arm",
+      "real_omitted_call_wall_and_control_cost_ms": null,
+      "extra_retrieval_or_rewrite_savings_from_stop": 0
+    }
+  }
+}

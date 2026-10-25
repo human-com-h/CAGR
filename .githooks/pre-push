@@ -1,0 +1,3 @@
+#!/bin/sh
+repository_root=$(git rev-parse --show-toplevel) || exit 1
+exec python "$repository_root/tools/check_publication_scope.py"

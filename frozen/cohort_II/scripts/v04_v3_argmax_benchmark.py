@@ -1,0 +1,57 @@
+"""Unchanged fixed ABC design; A vectorized/B scalar fused greedy-top2, C v2."""
+import copy,json,subprocess,time
+from v03_assets import write
+from v04_v3_gates import double_drop
+from v04_v3_benchmark import legacy_clone,call_view
+from v04_v3_argmax_checks import numeric_gate
+from v04_features import torch_step_signals
+from v04_v3_robust_control import TechnicalGateRejected
+
+ORDERS=[['A','B','C'],['B','C','A'],['C','A','B'],['C','B','A'],['B','A','C'],['A','C','B']]
+CYCLES=20
+
+
+def telemetry(root,label):
+    start=time.perf_counter();r={'label':label,'scope':'paid preparation diagnostic, never subtracted from E2E'}
+    try:
+        p=subprocess.run(['nvidia-smi','--query-gpu=index,name,clocks.current.sm,clocks.current.memory,temperature.gpu,power.draw,utilization.gpu,memory.used','--format=csv'],capture_output=True,text=True,timeout=10)
+        r.update(returncode=p.returncode,output=p.stdout,error=p.stderr)
+    except Exception as exc:r.update(error_type=type(exc).__name__)
+    r['ms']=1000*(time.perf_counter()-start)
+    with (root/'logs/v3_gpu_telemetry.jsonl').open('a',encoding='utf-8') as f:f.write(json.dumps(r)+'\n')
+    return r
+
+
+
+def startup(g,config,samples,root,append):
+    start=time.perf_counter();report={'status':'running','selected':None,'GPU_measured':True,'fixed_cycles':CYCLES,'measured_ABC_calls':720,'paid_warmup_calls':36,'variants_definition':{'A':'fused_argmax_top2_vectorized8_aligned_or_scalar_fallback','B':'fused_argmax_top2_scalar','C':'unchanged_v2_event_comparator'}}
+    path=root/'logs/v3_startup.json';write(path,report);telemetry(root,'before_startup')
+    try:
+        c=legacy_clone(g);report['numeric']=numeric_gate(g);observations=[]
+        for phase,cycles in [('preregistered_warmup',1),('measurement',CYCLES)]:
+            for sample in samples[:2]:
+                for repeat in range(cycles*len(ORDERS)):
+                    order=ORDERS[repeat%len(ORDERS)];group={}
+                    for mode in order:
+                        if time.monotonic()>g.robust_process_deadline:raise RuntimeError('Frozen remote budget exhausted in ABC benchmark')
+                        target=c if mode=='C' else g
+                        if mode!='C':g.signal_variant=mode
+                        target.calls=[];target.torch.manual_seed(42);target.torch.cuda.manual_seed_all(42);before=time.perf_counter()
+                        try:target.generate(config['generation']['answer_system'],'Question: '+sample['question'],config['model']['max_answer_tokens'],'v3_ABC_real_generation')
+                        finally:
+                            wall_ms=1000*(time.perf_counter()-before)
+                            append(root/'logs/v3_startup_calls.jsonl',{'sample_id':sample['sample_id'],'repeat':repeat,'mode':mode,'order':order,'phase':phase,
+                                'scope':'one paid technical execution; warmup designated before observations, never outcome-filtered','generation_calls':target.calls,'attempt_wall_ms':wall_ms})
+                        call=dict(target.calls[-1]);call['micro_attempt_wall_ms']=wall_ms;group[mode]=call
+                    if not (call_view(group['A'])==call_view(group['B'])==call_view(group['C'])):raise RuntimeError('Real ABC tokens/features/cache differ')
+                    if phase=='measurement':observations.append(group)
+        def costs(v):return {'signal_ms':v['signal_ms']+v.get('feature_materialization_ms',0.),'generation_ms':v['ms'],'end_to_end_ms':v['micro_attempt_wall_ms']}
+        report['variants']={mode:double_drop([{'candidate':costs(o[mode]),'v2':costs(o['C'])} for o in observations]) for mode in ['A','B']}
+        report['selected']=next((m for m in ['A','B'] if report['variants'][m]['passed']),None)
+        report['status']='passed' if report['selected'] else 'rejected'
+        if report['selected'] is None:raise TechnicalGateRejected('startup',{'gate':'logs/v3_startup.json','scientific_acceptance':False,'calibration_started':False})
+        g.signal_variant=report['selected'];g.calls=[];return c,report
+    except TechnicalGateRejected:raise
+    except BaseException as exc:report.update(status='failed',error_type=type(exc).__name__,error=str(exc));raise
+    finally:
+        report['ms']=1000*(time.perf_counter()-start);report['clock_calibrations']=g.pool.clock_records;write(path,report);telemetry(root,'after_startup')

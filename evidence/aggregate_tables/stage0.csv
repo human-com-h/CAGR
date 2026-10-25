@@ -1,0 +1,4 @@
+Features,Dimensions,OOF AUC,OOF MSE,OOF F1 (%),Training F1 (%)
+Pilot K=5,1,0.6615,0.1707,38.58,38.78
+Question structure,30,0.4985,0.1884,36.10,41.03
+Fusion,61,0.6287,0.2397,36.91,43.21

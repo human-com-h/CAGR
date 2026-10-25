@@ -1,0 +1,237 @@
+{
+  "rank_rule": "frozen CAGR utility descending, sample_id tie; no gold-based ranking",
+  "metrics": {
+    "original_410": {
+      "hotpotqa": {
+        "n": 500,
+        "first_retrievals": 265,
+        "first_retrieval_rate": 0.53,
+        "em": 0.214,
+        "f1": 0.3064558101310733,
+        "f1_minus_current_binary": 0.0,
+        "f1_minus_rag": -0.029407799802536643,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 457.41398797198883,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 547.1359505560134,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "triviaqa": {
+        "n": 500,
+        "first_retrievals": 145,
+        "first_retrieval_rate": 0.29,
+        "em": 0.356,
+        "f1": 0.43059116118233237,
+        "f1_minus_current_binary": 0.0,
+        "f1_minus_rag": 0.016781923948602263,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 350.680806616014,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 399.5504660079987,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "overall": {
+        "n": 1000,
+        "first_retrievals": 410,
+        "first_retrieval_rate": 0.41,
+        "em": 0.285,
+        "f1": 0.36852348565670284,
+        "f1_minus_current_binary": 0.0,
+        "f1_minus_rag": -0.006312937926967191,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 404.0473972940014,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 473.3432082820061,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      }
+    },
+    "CAGR_score_top_555": {
+      "hotpotqa": {
+        "n": 500,
+        "first_retrievals": 320,
+        "first_retrieval_rate": 0.64,
+        "em": 0.218,
+        "f1": 0.3120002545755177,
+        "f1_minus_current_binary": 0.005544444444444444,
+        "f1_minus_rag": -0.0238633553580922,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 507.6211362279887,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 615.2954231880068,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "triviaqa": {
+        "n": 500,
+        "first_retrievals": 235,
+        "first_retrieval_rate": 0.47,
+        "em": 0.372,
+        "f1": 0.44591342196248795,
+        "f1_minus_current_binary": 0.015322260780155517,
+        "f1_minus_rag": 0.03210418472875778,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 415.56896939401236,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 493.9807171259801,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "overall": {
+        "n": 1000,
+        "first_retrievals": 555,
+        "first_retrieval_rate": 0.555,
+        "em": 0.295,
+        "f1": 0.3789568382690028,
+        "f1_minus_current_binary": 0.010433352612299981,
+        "f1_minus_rag": 0.00412041468533279,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 461.59505281100047,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 554.6380701569933,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      }
+    },
+    "CAGR_score_match_TARG_per_dataset": {
+      "hotpotqa": {
+        "n": 500,
+        "first_retrievals": 314,
+        "first_retrieval_rate": 0.628,
+        "em": 0.222,
+        "f1": 0.3154669212421844,
+        "f1_minus_current_binary": 0.00901111111111111,
+        "f1_minus_rag": -0.020396688691425535,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 502.37242506998837,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 608.0274302260061,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "triviaqa": {
+        "n": 500,
+        "first_retrievals": 241,
+        "first_retrieval_rate": 0.482,
+        "em": 0.372,
+        "f1": 0.44724675529582125,
+        "f1_minus_current_binary": 0.016655594113488853,
+        "f1_minus_rag": 0.033437518062091116,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 419.90979007001107,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 500.1065634839817,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "overall": {
+        "n": 1000,
+        "first_retrievals": 555,
+        "first_retrieval_rate": 0.555,
+        "em": 0.297,
+        "f1": 0.3813568382690028,
+        "f1_minus_current_binary": 0.012833352612299979,
+        "f1_minus_rag": 0.00652041468533279,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 461.1411075699997,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 554.0669968549939,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      }
+    },
+    "exact_TARG_selection": {
+      "hotpotqa": {
+        "n": 500,
+        "first_retrievals": 314,
+        "first_retrieval_rate": 0.628,
+        "em": 0.224,
+        "f1": 0.320205382780646,
+        "f1_minus_current_binary": 0.013749572649572649,
+        "f1_minus_rag": -0.015658227152963996,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 504.88354878198294,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 610.6256893859832,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "triviaqa": {
+        "n": 500,
+        "first_retrievals": 241,
+        "first_retrieval_rate": 0.482,
+        "em": 0.372,
+        "f1": 0.44403768851121267,
+        "f1_minus_current_binary": 0.013446527328880272,
+        "f1_minus_rag": 0.030228451277482533,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 411.7589261180167,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 489.8961954959773,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      },
+      "overall": {
+        "n": 1000,
+        "first_retrievals": 555,
+        "first_retrieval_rate": 0.555,
+        "em": 0.298,
+        "f1": 0.3821215356459293,
+        "f1_minus_current_binary": 0.01359804998922646,
+        "f1_minus_rag": 0.0072851120622592705,
+        "arm_wall_splice_excludes_discarded_pilot_ms": 458.3212374499998,
+        "paid_component_latency_proxy_including_pilot_and_0_5ms_allowance": 550.2609424409803,
+        "GPU_E2E_for_counterfactual_policy_ms": null,
+        "quality_source": "same-prompt greedy Direct / Always-RAG, verified against current Matched Binary"
+      }
+    }
+  },
+  "retrieval_sets": {
+    "hotpotqa": {
+      "both_retrieve": {
+        "n": 245,
+        "rag_minus_direct_f1_sum": 47.74823714573714,
+        "contribution_to_TARG_minus_binary_f1": 0.0
+      },
+      "CAGR_only": {
+        "n": 20,
+        "rag_minus_direct_f1_sum": -0.1692307692307693,
+        "contribution_to_TARG_minus_binary_f1": 0.00033846153846153857
+      },
+      "TARG_only": {
+        "n": 69,
+        "rag_minus_direct_f1_sum": 6.705555555555556,
+        "contribution_to_TARG_minus_binary_f1": 0.013411111111111111
+      },
+      "both_skip": {
+        "n": 166,
+        "rag_minus_direct_f1_sum": 7.998344345712766,
+        "contribution_to_TARG_minus_binary_f1": 0.0
+      }
+    },
+    "triviaqa": {
+      "both_retrieve": {
+        "n": 128,
+        "rag_minus_direct_f1_sum": 19.818437241169626,
+        "contribution_to_TARG_minus_binary_f1": 0.0
+      },
+      "CAGR_only": {
+        "n": 17,
+        "rag_minus_direct_f1_sum": 2.3333333333333335,
+        "contribution_to_TARG_minus_binary_f1": -0.004666666666666667
+      },
+      "TARG_only": {
+        "n": 113,
+        "rag_minus_direct_f1_sum": 9.056596997773468,
+        "contribution_to_TARG_minus_binary_f1": 0.018113193995546936
+      },
+      "both_skip": {
+        "n": 242,
+        "rag_minus_direct_f1_sum": -17.447558972074603,
+        "contribution_to_TARG_minus_binary_f1": 0.0
+      }
+    },
+    "overall": {
+      "both_retrieve": {
+        "n": 373,
+        "rag_minus_direct_f1_sum": 67.56667438690677,
+        "contribution_to_TARG_minus_binary_f1": 0.0
+      },
+      "CAGR_only": {
+        "n": 37,
+        "rag_minus_direct_f1_sum": 2.164102564102564,
+        "contribution_to_TARG_minus_binary_f1": -0.002164102564102564
+      },
+      "TARG_only": {
+        "n": 182,
+        "rag_minus_direct_f1_sum": 15.762152553329024,
+        "contribution_to_TARG_minus_binary_f1": 0.015762152553329023
+      },
+      "both_skip": {
+        "n": 408,
+        "rag_minus_direct_f1_sum": -9.449214626361835,
+        "contribution_to_TARG_minus_binary_f1": 0.0
+      }
+    }
+  }
+}

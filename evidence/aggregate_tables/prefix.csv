@@ -1,0 +1,11 @@
+K,Fixed rule,H retrievals,T retrievals,H F1 (%),T F1 (%),All F1 (%)
+1,CAGR-R first gate,418,394,32.03,43.45,37.74
+1,TARG-style,393,370,31.97,43.02,37.49
+2,CAGR-R first gate,330,277,31.33,44.82,38.08
+2,TARG-style,353,329,32.15,44.90,38.53
+3,CAGR-R first gate,302,198,31.55,44.43,37.99
+3,TARG-style,340,282,32.19,45.28,38.74
+4,CAGR-R first gate,279,166,31.51,44.57,38.04
+4,TARG-style,326,255,32.29,44.74,38.52
+5,CAGR-R first gate,265,145,30.65,43.06,36.85
+5,TARG-style,314,241,32.02,44.40,38.21
