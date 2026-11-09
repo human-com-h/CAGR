@@ -6,7 +6,13 @@ CAGR separates the decision to retrieve from the decision to escalate after obse
 
 **Status:** `v0.1.0-rc.3`. CPU evaluation replay, all 15 table exports, parameter reconstruction, and data/index reconstruction have been validated. The public GPU adapter still requires a fresh end-to-end run; see [reproducibility status](REPRODUCIBILITY.md).
 
-A link to the paper will be added when a public preprint or publication is available.
+## Preprint
+
+The manuscript is publicly available as a preprint on Research Square.
+
+- **Preprint:** [Research Square](https://doi.org/10.21203/rs.3.rs-11499644/v1)
+- **DOI:** [10.21203/rs.3.rs-11499644/v1](https://doi.org/10.21203/rs.3.rs-11499644/v1)
+- **Version:** v1
 
 ## Results and scope
 
@@ -54,7 +60,7 @@ python tools/prepare_resources.py --datasets --corpus
 python tools/prepare_resources.py --model
 ```
 
-Model use is subject to the **Qwen Research License**. The software's MIT license does not change the model or dataset terms. Downloads use exact revisions and SHA-256 checks; no private Kaggle assets are needed.
+Model use is subject to the **Qwen Research License**. The software's MIT license does not change the model or dataset terms. Downloads use exact revisions and SHA-256 checks; no private experiment assets are required.
 
 Use Linux, CUDA 12.8 with `nvcc`, a C++ compiler, Ninja, and a T4-compatible GPU. Original measurements used Python 3.13.15, PyTorch 2.11.0+cu128, Transformers 4.51.3, FP16/SDPA, one designated T4, batch size 1 and concurrency 1, on a machine with two T4s. Other hardware can run functional checks but cannot reproduce the recorded absolute latency.
 
